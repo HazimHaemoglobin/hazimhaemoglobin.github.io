@@ -1,4 +1,29 @@
 <head>
+
+
+																										<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js">
+																										</script>
+																										<script type="text/javascript">
+																										$(document).ready(function(){
+																											$(".flip").click(function(){
+																												$(".panel").slideToggle("slow");
+																											});
+																										});
+																										</script>
+																										<style type="text/css">
+																										div.panel,p.flip{
+																											margin:0px;
+																											padding:5px;
+																											text-align:center;
+																											background:#ddd;
+																											border:solid 1px #fff;
+																										}
+																										div.panel{
+																											width:50%;
+																											height:100px;
+																											display:none;
+																										}
+																										</style>
 	<meta charset="UTF-8" />
 	<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
 	<title>TEDxUniversityOfWinnipeg | By krysjonaz </title>
@@ -380,7 +405,29 @@
 																									</a>
 																									<a class='preview qbutton small white' href='http://i.imgur.com/s7LePUF.jpg?1' target='_self'>view
 																									</a>
-																									<a class='preview qbutton small white' href='http://i.imgur.com/s7LePUF.jpg?1' target='_self'>bio
+																									<a class='preview qbutton small white' href='http://i.imgur.com/s7LePUF.jpg?1' target='_self'>
+																										<div class="panel">
+																											<p>Hey!
+
+I'm Chris, and I am thrilled to be part of this amazing tedXperience.
+
+I am a 25 year old Computer Science major who enjoys swimming, cycling, and reading. Oh, and tinkering with the back-end of web frameworks :)
+
+My goal as part of our team is to develop a secure website that is fuunctional across Chrome, Firefox, iPhone, and Android browsers, providing interactivity that will leave you hungry for our TEDx talk this September. I am also broadcasting our TEDx talk LIVE so those without tickets can see the exciting discussion as it happens.
+
+Please join me in my utmost excitement for our very own TEDx talk,
+
+Chris
+<p>
+	<p>Click to toggle visibility</p>
+
+																										<p class="flip">bio</p>
+																										<br><br>
+																										<div align="center">
+																											<div style="font-family:verdana;padding:10px;border-radius:10px;border:3px solid #EE872A; width:50%;font-size:12px;">
+																												EXAMPLE
+																											</div>
+																										</div>
 																									</a>
 																								</span>
 																							</span>
@@ -591,7 +638,8 @@
 															</div>
 														</div> 
 
-														<div    class="wpb_row section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix">
+														<div    class="wpb_row section vc_row-fluid grid_section" style=' text-align:left;'>
+															<div class=" section_inner clearfix">
 															<div class='section_inner_margin clearfix'>
 																<div class="vc_span12 wpb_column column_container">
 																	<div class="wpb_wrapper">
