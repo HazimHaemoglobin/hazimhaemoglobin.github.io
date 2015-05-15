@@ -1,819 +1,928 @@
 <head>
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js">
+    </script>
+    <script type="text/javascript" src="cycle.js">
+        $(document).ready(function () {
+            $(".flip").click(function () {
+                $(".panel").slideToggle("slow");
+            });
+        });
+    </script>
+    <style type="text/css">
+        div.panel,p.flip{
+            margin:0px;
+            padding:5px;
+            text-align:center;
+            background:#ddd;
+            border:solid 1px #fff;
+        }
+        div.panel{
+            width:50%;
+            height:100px;
+            display:none;
+        }
 
-																										<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js">
-																										</script>
-																										<script type="text/javascript">
-																										$(document).ready(function(){
-																											$(".flip").click(function(){
-																												$(".panel").slideToggle("slow");
-																											});
-																										});
-																										</script>
-																										<style type="text/css">
-																										div.panel,p.flip{
-																											margin:0px;
-																											padding:5px;
-																											text-align:center;
-																											background:#ddd;
-																											border:solid 1px #fff;
-																										}
-																										div.panel{
-																											width:50%;
-																											height:100px;
-																											display:none;
-																										}
-																										</style>
-	<meta charset="UTF-8" />
-	<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
-	<title>TEDxUniversityOfWinnipeg | By krysjonaz </title>
-	<!-- 
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="http://tedxcambridgeuniversity.org/xmlrpc.php" />
-	<link rel="shortcut icon" type="image/x-icon" href="http://tedxcambridgeuniversity.org/wp-content/uploads/2014/09/favicon.ico">
-	<link rel="apple-touch-icon" href="http://tedxcambridgeuniversity.org/wp-content/uploads/2014/09/favicon.ico"/> -->
-	<!--[if gte IE 9]>
-		<style type="text/css">
-			.gradient {
-				 filter: none;
-			}
-		</style>
-		<![endif]-->
+    </style>
 
-		<link href='http://fonts.googleapis.com/css?family=Raleway:100, 400,300,600,700,500,200|Open+Sans:200,300,400,600,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Montserrat:200,300,400,600,700,800|Montserrat:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style>
+        .hidden{
+            display:none;
+        }
 
-		<!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
-		<meta name="description" content="An independently organised TED event in the heart of the University Of Winnipeg. Join us for a day of inspiration and exploration on <<TBA>>."/>
-		<link rel="canonical" href="http://tedxuniversityofwinnipeg.com/" />
-		<link rel="publisher" href="https://www.google.com/+Bmatcrashcourse2015"/>
-		<meta property="og:locale" content="en_CA" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="TEDxUniversityOfWinnipeg - By krysjonaz" />
-		<meta property="og:description" content="An independently organised TED event in the heart of the University Of Winnipeg. Join us for a day of inspiration and exploration on <<TBA>>." />
-		<meta property="og:url" content="http://tedxuniversityofwinnipeg.com/" />
-		<meta property="og:site_name" content="TEDxUniversityOfWinnipeg" />
-		<meta property="article:publisher" content="https://www.facebook.com/TEDxUniversityOfWinnipeg" />
-		<meta property="og:image" content="http://i.imgur.com/YbAnJ0H.png" />
-		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:site" content="@Tedxuwinnipeg"/>
-		<meta name="twitter:domain" content="TEDxUniversityOdWinnipeg"/>
-		<meta name="twitter:creator" content="@Tedxuwinnipeg"/>
-		<meta name="google-site-verification" content="zWqxNRTtIvsSrCj4Zm-hwR-eNoFjeD23E89hS0aRC7s" />
-		<!--<script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://tedxcambridgeuniversity.org/", "potentialAction": { "@type": "SearchAction", "target": "http://tedxcambridgeuniversity.org/?s={search_term}", "query-input": "required name=search_term" } }</script>
-	-->
+        .unhidden{
+            display:block;
+        }
+        .fixedElement {
+            background-color: #c0c0c0;
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:100;
+        }
+    </style>
+    <script type="text/javascript">
+        function unhide(divID, otherDivId) {
+            var item = document.getElementById(divID);
+            if (item) {
+                item.className = (item.className == 'hidden') ? 'unhidden' : 'hidden';
+            }
+            document.getElementById(otherDivId).className = 'hidden';
+        }
+    </script>
+    <meta charset="UTF-8"/>
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>TEDxUniversityOfWinnipeg | By krysjonaz </title>
 
-	<!-- / Yoast WordPress SEO plugin. -->
 
-	<link rel='stylesheet' id='layerslider-css'  href='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/css/layerslider.css?ver=5.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900|Open+Sans:300|Indie+Flower:regular|Oswald:300,regular,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
-	<link rel='stylesheet' id='default_style-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/style.css?ver=4.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='font-awesome-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/font-awesome/css/font-awesome.min.css?ver=4.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='stylesheet-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/stylesheet.min.css?ver=4.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='style_dynamic-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/style_dynamic.php?ver=4.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='responsive-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/responsive.min.css?ver=4.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='style_dynamic_responsive-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/style_dynamic_responsive.php?ver=4.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='js_composer_front-css'  href='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/css/js_composer_front.css?ver=4.2.3' type='text/css' media='all' />
-	<link rel='stylesheet' id='custom_css-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/custom_css.php?ver=4.1.1' type='text/css' media='all' />
-	<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
-	<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-	<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/layerslider.kreaturamedia.jquery.js?ver=5.1.1'></script>
-	<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/greensock.js?ver=1.11.2'></script>
-	<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/layerslider.transitions.js?ver=5.1.1'></script>
-	<meta name="generator" content="WordPress 4.1.1" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100, 400,300,600,700,500,200|Open+Sans:200,300,400,600,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Montserrat:200,300,400,600,700,800|Montserrat:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800|Open+Sans:200,300,400,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-	<!-- BEGIN GADWP v4.3.4 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description" content="An independently organised TED event in the heart of the University Of Winnipeg. Join us for a day of inspiration and exploration on <<TBA>>."/>
+    <link rel="canonical" href="http://tedxuniversityofwinnipeg.com/" />
+    <link rel="publisher" href="https://www.google.com/+Bmatcrashcourse2015"/>
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TEDxUniversityOfWinnipeg - By krysjonaz" />
+    <meta property="og:description" content="An independently organised TED event in the heart of the University Of Winnipeg. Join us for a day of inspiration and exploration on <<TBA>>." />
+    <meta property="og:url" content="http://tedxuniversityofwinnipeg.com/" />
+    <meta property="og:site_name" content="TEDxUniversityOfWinnipeg" />
+    <meta property="article:publisher" content="https://www.facebook.com/TEDxUniversityOfWinnipeg" />
+    <meta property="og:image" content="http://i.imgur.com/YbAnJ0H.png" />
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@Tedxuwinnipeg"/>
+    <meta name="twitter:domain" content="TEDxUniversityOdWinnipeg"/>
+    <meta name="twitter:creator" content="@Tedxuwinnipeg"/>
+    <meta name="google-site-verification" content="zWqxNRTtIvsSrCj4Zm-hwR-eNoFjeD23E89hS0aRC7s" />
+    <!--<script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "url": "http://tedxcambridgeuniversity.org/", "potentialAction": { "@type": "SearchAction", "target": "http://tedxcambridgeuniversity.org/?s={search_term}", "query-input": "required name=search_term" } }</script>
+    -->
 
-	ga('create', 'UA-53518031-1', 'auto');
-	ga('send', 'pageview');
+    <!-- / Yoast WordPress SEO plugin. -->
 
-	</script>
-	<!-- END GADWP Universal Tracking -->
+    <link rel='stylesheet' id='layerslider-css'  href='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/css/layerslider.css?ver=5.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900|Open+Sans:300|Indie+Flower:regular|Oswald:300,regular,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' id='default_style-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/style.css?ver=4.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/font-awesome/css/font-awesome.min.css?ver=4.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='stylesheet-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/stylesheet.min.css?ver=4.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='style_dynamic-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/style_dynamic.php?ver=4.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='responsive-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/responsive.min.css?ver=4.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='style_dynamic_responsive-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/style_dynamic_responsive.php?ver=4.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/css/js_composer_front.css?ver=4.2.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='custom_css-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/custom_css.php?ver=4.1.1' type='text/css' media='all' />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!--added by krys -->
+    <link rel='stylesheet' href='style2.css' type='text/css'>
 
-	<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/layerslider.kreaturamedia.jquery.js?ver=5.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/greensock.js?ver=1.11.2'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/layerslider.transitions.js?ver=5.1.1'></script>
+    <meta name="generator" content="WordPress 4.1.1" />
+
+    <!-- BEGIN GADWP v4.3.4 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-53518031-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- END GADWP Universal Tracking -->
+
+    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
 
 </head>
 
 <body class="home page page-id-4 page-template page-template-full_width page-template-full_width-php  wpb-js-composer js-comp-ver-4.2.3 vc_responsive">
 
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=337320103142292";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-
-	<div class="ajax_loader"><div class="ajax_loader_1"><div class="double_pulse"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div></div>
-	<div class="wrapper">
-		<div class="wrapper_inner">
-			<!-- Google Analytics start -->
-			<!-- Google Analytics end -->
-
-			<!-- Removed header -->
-			<div class="header_inner clearfix">
-
-				<div class="header_top_bottom_holder">
-
-
-				</header>
-				<a id='back_to_top' href='#'>
-					<span class="fa-stack">
-						<i class="fa fa-arrow-up" style=""></i>
-					</span>
-				</a>
-
-
-				<div class="content ">
-
-					<div class="content_inner  ">
-						<div class="q_slider">
-							<div class="q_slider_inner">
-								<div id="qode-home-slider-4"  class="carousel slide  full_screen  q_auto_start   " data-slide_animation="6000"  data-parallax="yes" style=" ">
-
-									<div class="carousel-inner " data-start="transform: translateY(0px);" data-1440="transform: translateY(-500px);">
-										<div class="item light"  style="">
-											<div class="image" style="background-image:url(http://i.imgur.com/AI1EBVy.jpg);"><img src="http://i.imgur.com/Szo9Np3" alt="Homepage">
-											</div>
-											<div class="slider_content_outer">
-												<div class="slider_content " style="width:90%;left:5%;top:20%;" data-start="width:90%; opacity:1; left:5%; top:20%;" data-300="opacity: 0; left:5%; top:10%;">
-													<div class="thumb fade" id="tedxuniversityofwinnipegheader">
-														<img src="http://i.imgur.com/YbAnJ0H.png" alt="Homepage">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>			
-							</div>
-						</div>
-						<div class="full_width">
-							<div class="full_width_inner">
-								<div    class="wpb_row section vc_row-fluid grid_section" style='background-color:#ffffff; padding-top:88px; text-align:left;'>
-									<div class=" section_inner clearfix">
-										<div class='section_inner_margin clearfix'>
-											<div class="vc_span12 wpb_column column_container">
-												<div class="wpb_wrapper">
-
-													<div class="wpb_text_column wpb_content_element  homeh2">
-														<div class="wpb_wrapper">
-															<h2 style="text-align: center;">WELCOME TO <span style="color: #ff0000;">TEDx </span>UNIVERSITY OF WINNIPEG</h2>
-
-														</div> 
-													</div> 
-													<div class="separator  transparent center  " style="margin-top: 13px;margin-bottom: 0px;">
-													</div>
-
-													<div class="wpb_text_column wpb_content_element ">
-														<div class="wpb_wrapper">
-															<h5 style="text-align: center;"><!--BOTTOM TEXT--></h5>
-
-														</div> 
-													</div> 
-													<div class="separator  transparent center  " style="margin-top: 64px;margin-bottom: 0px;">
-													</div>
-												</div> 
-											</div> 
-										</div>
-									</div>
-								</div>
-<!--
-									<section    data-speed="1" class="parallax_section_holder  " style = " height:px; background-image:url('http://tedxcambridgeuniversity.org/wp-content/uploads/2014/07/ideadark.jpg');">
-										<div class="parallax_content left">
-										</div>
-									</section>
-								-->
-								<div class="wpb_row section vc_row-fluid" style='background-color:#f7f7f7; text-align:left;'>
-									<div class=" full_section_inner clearfix">
-										<div class="vc_span12 wpb_column column_container">
-											<div class="wpb_wrapper">
-												<div    class="wpb_row section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix">
-													<div class='section_inner_margin clearfix'>
-														<div class="vc_span6 wpb_column column_container">
-															<div class="wpb_wrapper">
-																<div class="separator  transparent center  " style="margin-top: 96px;margin-bottom: 0px;">
-																</div>
-																<div class="custom_font_holder" style="font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;">WHAT IS <span style="color: #e62b1e;">TEDx</span>?
-																</div>
-																<div class="separator  transparent center  " style="margin-top: 19px;margin-bottom: 21px;">
-																</div>
-
-																<div class="wpb_text_column wpb_content_element ">
-																	<div class="wpb_wrapper">
-																		<p style="text-align: left;"><span style="color: #333333;">In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUniversityOfWinnipeg, where x = independently organised TED event. At our TEDxUniversityOfWinnipeg event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</span></p>
-																		<p style="text-align: left;">
-
-																		</div> 
-																	</div> 
-																</div> 
-															</div> 
-
-															<div class="vc_span6 wpb_column column_container">
-																<div class="wpb_wrapper">
-																	<div class="separator  transparent center  " style="margin-top: 96px;margin-bottom: 0px;">
-																	</div>
-																	<div class="custom_font_holder" style="font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;"><span style="color: #e62b1e;">EVENT</span> DETAILS
-																	</div>
-																	<div class="separator  transparent center  " style="margin-top: 19px;margin-bottom: 21px;">
-																	</div>
-
-																	<div class="wpb_text_column wpb_content_element ">
-																		<div class="wpb_wrapper">
-																			<p style="text-align: left;">We&#8217;ll be updating this page with event information as we get it. Please check back later!</p>
-																			<p style="text-align: left;">
-
-																			</div> 
-																		</div> 
-																		<div class="separator  transparent center  " style="margin-top: 5pxpx;margin-bottom: 5pxpx;">
-																		</div>
-																		<div class="q_icon_list"><i class="fa fa-location-arrow pull-left transparent " style="color:#e62b1e;"></i><p style="color:#333333;font-size: 17px;">In Eckhardt-Graham Hall!</p>
-																		</div>
-																		<div class="q_icon_list"><i class="fa fa-calendar-o pull-left transparent " style="color:#e62b1e;"></i><p style ="color:#333333;font-size: 17px;">September 25, 2015</p>
-																		</div>
-																		<div class="q_icon_list"><i class="fa fa-clock-o pull-left transparent " style="color:#e62b1e;"></i><p style="color:#333333;font-size: 17px;">4 PM - 9 PM</p>
-																		</div>
-																	</div> 
-																</div> 
-															</div>
-														</div>
-													</div>
-													<div class="separator  transparent center  " style="margin-top: 96px;margin-bottom: 0px;">
-													</div>
-												</div> 
-											</div> 
-										</div>
-									</div>
-
-									<div  data-q_id="#portfolio"  data-q_title="Portfolio List"  data-q_icon="fa-list" class="wpb_row section vc_row-fluid grid_section" style='background-color:#ffffff; padding-top:93px; padding-bottom:142px; text-align:left;'>
-										<div class=" section_inner clearfix">
-											<div class='section_inner_margin clearfix'>
-												<div class="vc_span12 wpb_column column_container">
-													<div class="wpb_wrapper">
-														<div class="separator  small center  " style="margin-top: 19px;margin-bottom: 21px;background-color: #e2e2e2;">
-														</div>
-														<div class="custom_font_holder" style="font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;">
-															<span style="color: #e62b1e;">OUR</span> TEAM
-														</div>
-														<div class="separator  small center  " style="margin-top: 19px;margin-bottom: 21px;background-color: #e2e2e2;">
-														</div>
-
-														<div class="wpb_text_column wpb_content_element ">
-															<div class="wpb_wrapper">
-																<!--<p style="text-align: center;">Say hello to us 9!</p>-->
-																<p style="text-align: left;">
-
-																</div> 
-															</div> 
-															<div class="separator  transparent center  " style="margin-top: 10px;margin-bottom: 33px;">
-															</div>
-															<div class='projects_holder_outer v4 portfolio_with_space'>
-																<div class='projects_holder clearfix v4 standard'>
-
-																	<article class='mix portfolio_category_6 '>
-																		<div class='image_holder'>
-																			<a class='portfolio_link_for_touch' href='http://i.imgur.com/wQ8AJgb.jpg' target='_self'>
-																				<span class='image'>
-																					<img width="570" height="570" src="http://i.imgur.com/wQ8AJgb.jpg" class="attachment-portfolio-square wp-post-image" alt="hazim-ismail" />
-																				</span>
-																			</a>
-																			<span class='text_holder'>
-																				<span class='text_outer'>
-																					<span class='text_inner'>
-																						<span class='feature_holder'>
-																							<span class="feature_holder_icons">
-																								<a class='lightbox qbutton small white' title='Hazim Ismail' href='http://i.imgur.com/wQ8AJgb.jpg' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
-																								</a>
-																								<a class='preview qbutton small white' href='http://i.imgur.com/wQ8AJgb.jpg' target='_self'>view</a>
-																								<a class='preview qbutton small white' href='http://i.imgur.com/wQ8AJgb.jpg' target='_self'>bio</a>
-																							</span>
-																						</span>
-																					</span>
-																				</span>
-																			</span>
-																		</div>
-																		<div class='portfolio_description'>
-																			<h5 class="portfolio_title">
-																				<a href="http://i.imgur.com/wQ8AJgb.jpg" target="_self">Hazim Ismail</a>
-																			</h5>
-																			<h3 class="job_title">
-																				Lead Organizer <!--Go Hazim! -->
-																			</h3>
-																			<span class="project_category">2015 Speakers
-																			</span>
-																		</div>
-																	</article>
-
-																	<article class='mix portfolio_category_6'>
-																		<div class='image_holder'>
-																			<a class='portfolio_link_for_touch' href='' target='_self'>
-																				<span class='image'>
-																					<img width="570" height="570" src="http://i.imgur.com/s9TJTAB.png?1" class="attachment-portfolio-square wp-post-image" alt="bilguundari-enkhtugs" />
-																				</span>
-																			</a>
-																			<span class='text_holder'>
-																				<span class='text_outer'>
-																					<span class='text_inner'>
-																						<span class='feature_holder'>
-																							<span class="feature_holder_icons">
-																								<a class='lightbox qbutton small white' title='Bilguundari Enkhtugs' href='http://i.imgur.com/OqauXpJ.png?1' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
-																								</a>
-																								<a class='preview qbutton small white' 
-																								href='http://i.imgur.com/s9TJTAB.png?1' target='_self'>view</a>
-																								<a class='preview qbutton small white' 
-																								href='http://i.imgur.com/s9TJTAB.png?1' target='_self'>bio
-
-																							</a>
-																						</span>
-																					</span>
-																				</span>
-																			</span>
-																		</span>
-																	</div>
-																	<div class='portfolio_description'>
-																		<h5 class="portfolio_title">
-																			<a href="http://i.imgur.com/s9TJTAB.png?1" target="_self">Bilguundari Enkhtugs
-																			</a>
-																		</h5>
-																		<h3 class="job_title">
-																			Legal
-																		</h3>
-																		<span class="project_category">2015 Speakers
-																		</span>
-																	</div>
-																</article>
-
-																<article class='mix portfolio_category_6 '>
-																	<div class='image_holder'>
-																		<a class='portfolio_link_for_touch' href='' target='_self'>
-																			<span class='image'><img width="400" height="400" src="http://i.imgur.com/jcPTKZH.jpg?1" class="attachment-portfolio-square wp-post-image" alt="julia-burakova" /></span></a><span class='text_holder'><span class='text_outer'><span class='text_inner'><span class='feature_holder'><span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Julia Burakova' href='http://i.imgur.com/jcPTKZH.jpg?1' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom</a><a class='preview qbutton small white' href='http://i.imgur.com/jcPTKZH.jpg?1' target='_self'>view</a></span></span></span></span></span></div><div class='portfolio_description'><h5 class="portfolio_title"><a href="http://i.imgur.com/jcPTKZH.jpg?1" target="_self">Julia Burakova
-																		</a></h5>
-																		<h3 class="job_title">
-																			Hospitality
-																		</h3><span class="project_category">2015 Speakers</span></div></article>
-
-																		<article class='mix portfolio_category_6 '><div class='image_holder'><a class='portfolio_link_for_touch' target='_self'><span class='image'><img width="500" height="490" src="http://i.imgur.com/meYMbJK.jpg?2" class="attachment-portfolio-square wp-post-image" alt="Dele-Ojewole" /></span></a><span class='text_holder'><span class='text_outer'><span class='text_inner'><span class='feature_holder'><span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Dele Ojewole' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom</a><a class='preview qbutton small white' href='http://i.imgur.com/meYMbJK.jpg?2' target='_self'>view</a></span></span></span></span></span></div><div class='portfolio_description'><h5 class="portfolio_title"><a href="http://i.imgur.com/meYMbJK.jpg?2" target="_self">Dele Ojewole</h5>
-																			<h3 class="job_title">
-																				Publicity
-																			</h3><span class="project_category">2015 Speakers</span></div></article>
-
-																			<article class='mix portfolio_category_6 '>
-																				<div class='image_holder'>
-																					<a class='portfolio_link_for_touch' href='' target='_self'>
-																						<span class='image'>
-																							<img width="400" height="400" src="http://i.imgur.com/lfJEsrD.jpg" class="attachment-portfolio-square wp-post-image" alt="brianne-mckay" />
-																						</span>
-																					</a>
-																					<span class='text_holder'>
-																						<span class='text_outer'>
-																							<span class='text_inner'>
-																								<span class='feature_holder'>
-																									<span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Brianne McKay' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
-																									</a>
-																									<a class='preview qbutton small white' href='http://i.imgur.com/lfJEsrD.jpg' target='_self'>view
-																									</a>
-																									<a class='preview qbutton small white' href='http://i.imgur.com/lfJEsrD.jpg' target='_self'>bio
-																									</a>
-																								</span>
-																							</span>
-																						</span>
-																					</span>
-																				</span>
-																			</div>
-																			<div class='
-																			portfolio_description'><h5 class="portfolio_title"><a href="ttp://i.imgur.com/lfJEsrD.jpg" target="_self">Brianne McKay</a></h5>
-																			<h3 class="job_title">
-																				Hospitality
-																			</h3><span class="project_category">2015 Speakers</span></div></article>
-
-																			<article class='mix portfolio_category_6 '>
-																				<div class='image_holder'>
-																					<a class='portfolio_link_for_touch' href='' target='_self'>
-																						<span class='image'>
-																							<img width="400" height="400" src="http://i.imgur.com/s7LePUF.jpg?1" class="attachment-portfolio-square wp-post-image" alt="chris-johnson" />
-																						</span>
-																					</a>
-																					<span class='text_holder'>
-																						<span class='text_outer'>
-																							<span class='text_inner'>
-																								<span class='feature_holder'>
-																									<span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Chris Johnson' href='http://i.imgur.com/s7LePUF.jpg?1' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
-																									</a>
-																									<a class='preview qbutton small white' href='http://i.imgur.com/s7LePUF.jpg?1' target='_self'>view
-																									</a>
-																									<a class='preview qbutton small white' href='http://i.imgur.com/s7LePUF.jpg?1' target='_self'>
-																										<div class="panel">
-																											<p>Hey!
-
-I'm Chris, and I am thrilled to be part of this amazing tedXperience.
-
-I am a 25 year old Computer Science major who enjoys swimming, cycling, and reading. Oh, and tinkering with the back-end of web frameworks :)
-
-My goal as part of our team is to develop a secure website that is fuunctional across Chrome, Firefox, iPhone, and Android browsers, providing interactivity that will leave you hungry for our TEDx talk this September. I am also broadcasting our TEDx talk LIVE so those without tickets can see the exciting discussion as it happens.
-
-Please join me in my utmost excitement for our very own TEDx talk,
-
-Chris
-<p>
-	<p>Click to toggle visibility</p>
-
-																										<p class="flip">bio</p>
-																										<br><br>
-																										<div align="center">
-																											<div style="font-family:verdana;padding:10px;border-radius:10px;border:3px solid #EE872A; width:50%;font-size:12px;">
-																												EXAMPLE
-																											</div>
-																										</div>
-																									</a>
-																								</span>
-																							</span>
-																						</span>
-																					</span>
-																				</span>
-																			</div>
-																			<div class='portfolio_description'>
-																				<h5 class="portfolio_title">
-																					<a href="http://i.imgur.com/s7LePUF.jpg?1" target="_self">Chris Johnson
-																					</a>
-																				</h5>
-																				<h3 class="job_title">
-																					Web Design
-																				</h3>
-																				<span class="project_category">2015 Speakers
-																				</span>
-																			</div>
-																		</article>
-
-																		<article class='mix portfolio_category_6 '><div class='image_holder'><a class='portfolio_link_for_touch' href='' target='_self'><span class='image'><img width="333" height="333" src="http://i.imgur.com/U7Ca7jZ.jpg" class="attachment-portfolio-square wp-post-image" alt="wei-li" />
-																		</span>
-																	</a>
-																	<span class='text_holder'>
-																		<span class='text_outer'>
-																			<span class='text_inner'>
-																				<span class='feature_holder'>
-																					<span class="feature_holder_icons">
-																						<a class='lightbox qbutton small white' title='Wei Li' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom</a>
-																						<a class='preview qbutton small white' href='http://i.imgur.com/U7Ca7jZ.jpg' target='_self'>pic</a><a class='preview qbutton small white' href='http://i.imgur.com/U7Ca7jZ.jpg' target='_self'
-																						value="bio_box"
-																						id="bio_box"
-																						type="button"
-																						onclick=display()>bio</a>
-																					</span>
-																				</span>
-																			</span>
-																		</span>
-																	</span>
-																</div>
-																<div class='portfolio_description'><h5 class="portfolio_title"><a href="http://i.imgur.com/U7Ca7jZ.jpg" target="_self">Wei Li</a></h5>
-																	<h3 class="job_title">
-																		Finance
-																	</h3><span class="project_category">2015 Speakers</span></div></article>
-
-																	<article class='mix portfolio_category_6 '><div class='image_holder'><a class='portfolio_link_for_touch' href='' target='_self'><span class='image'><img width="300" height="300" src="http://i.imgur.com/XaZxZ48.jpg" class="attachment-portfolio-square wp-post-image" alt="oksana-potapchik" /></span></a><span class='text_holder'><span class='text_outer'><span class='text_inner'><span class='feature_holder'><span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Oksana Potaochik' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom</a><a class='preview qbutton small white' href='http://i.imgur.com/XaZxZ48.jpg' target='_self'>view</a><a class='preview qbutton small white' href='http://i.imgur.com/XaZxZ48.jpg' target='_self'>bio</a></span></span></span></span></span></div><div class='portfolio_description'><h5 class="portfolio_title"><a href="http://i.imgur.com/XaZxZ48.jpg" target="_self">Oksana Potapchik</a></h5>
-																		<h3 class="job_title">
-																			Sponsorship
-																		</h3><span class="project_category">2015 Speakers</span></div></article>
-
-																		<article class='mix portfolio_category_6 '>
-																			<div class='image_holder'><a class='portfolio_link_for_touch' href='' target='_self'><span class='image'><img width="400" height="400" src="http://i.imgur.com/nHaUKiJ.jpg?1" class="attachment-portfolio-square wp-post-image" alt="parth-brahmbhatt" /></span></a><span class='text_holder'><span class='text_outer'><span class='text_inner'><span class='feature_holder'><span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Parth Brahmbhatt' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom</a><a class='preview qbutton small white' href='http://i.imgur.com/nHaUKiJ.jpg?1' target='_self'>view</a><a class='preview qbutton small white' href='http://i.imgur.com/nHaUKiJ.jpg?1' target='_self'>bio</a></span></span></span></span></span></div><div class='portfolio_description'><h5 class="portfolio_title"><a href="http://i.imgur.com/nHaUKiJ.jpg?1" target="_self">Parth Brahmbhatt</a></h5>
-																			<h3 class="job_title">
-																				Sponsorship
-																			</h3><span class="project_category">2015 Speakers</span>
-																		</div>
-																	</article>
-																</div>
-															</div><!-- 
-															<div class="separator  small center  " style="margin-top: 19px;margin-bottom: 21px;background-color: #e2e2e2;">
-															</div> --><!-- 
-															<div class="custom_font_holder" style="font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;">
-																<span style="color: #e62b1e;">OUR</span> SPEAKERS
-															</div>
-															<div class="separator  small center  " style="margin-top: 19px;margin-bottom: 21px;background-color: #e2e2e2;">
-															</div>
-															<div class="wpb_text_column wpb_content_element ">
-																<div class="wpb_wrapper">
-																	<p style="text-align: center;">Welcome!</p>
-																	<p style="text-align: left;">
-
-																	</div> 
-																</div> 
-
-																<div class="separator  transparent center  " style="margin-top: 10px;margin-bottom: 33px;">
-																</div>  -->
-																<!-- <div class='projects_holder_outer v4 portfolio_with_space'>
-																	<div class='projects_holder clearfix v4 standard'>
-
-
-																		<article class='mix portfolio_category_6 '>
-																			<div class='image_holder'>
-																				<a class='portfolio_link_for_touch' href='' target='_self'>
-																					<span class='image'>
-																						<img width="400" height="400" src="http://i.imgur.com/Kg9lg66.jpg" class="attachment-portfolio-square wp-post-image" alt="jeremy-frimer" />
-																					</span>
-																				</a>
-																				<span class='text_holder'>
-																					<span class='text_outer'>
-																						<span class='text_inner'>
-																							<span class='feature_holder'>
-																								<span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Jeremy Frimer' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
-																								</a>
-																								<a class='preview qbutton small white' href='http://i.imgur.com/Kg9lg66.jpg' target='_self'>view
-																								</a>
-																								<a class='preview qbutton small white' href='http://i.imgur.com/Kg9lg66.jpg' target='_self'>bio
-																								</a>
-																							</span>
-																						</span>
-																					</span>
-																				</span>
-																			</span>
-																		</div>
-																		<div class='portfolio_description'>
-																			<h5 class="portfolio_title">
-																				<a href="" target="_self">Jeremy Frimer
-																				</a>
-																			</h5>
-																			<span class="project_category">2015 Speakers
-																			</span>
-																		</div>
-																	</article>
-
-
-
-																	<article class='mix portfolio_category_6'>
-																		<div class='image_holder'>
-																			<a class='portfolio_link_for_touch' href='' target='_self'>
-																				<span class='image'>
-																					<img width="570" height="570" src="http://i.imgur.com/0sb1ii1.jpg" class="attachment-portfolio-square wp-post-image" alt="danny-blair" />
-																				</span>
-																			</a>
-																			<span class='text_holder'>
-																				<span class='text_outer'>
-																					<span class='text_inner'>
-																						<span class='feature_holder'>
-																							<span class="feature_holder_icons">
-																								<a class='lightbox qbutton small white' title='Danny Blair' href='http://i.imgur.com/OqauXpJ.png?1' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
-																								</a>
-																								<a class='preview qbutton small white' href='http://i.imgur.com/0sb1ii1.jpg' target='_self'>view</a>
-																								<a class='preview qbutton small white' href='http://i.imgur.com/0sb1ii1.jpg' target='_self'>bio</a>
-																							</span>
-																						</span>
-																					</span>
-																				</span>
-																			</span>
-																		</div>
-																		<div class='portfolio_description'>
-																			<h5 class="portfolio_title">
-																				<a href="" target="_self">Danny Blair
-																				</a>
-																			</h5>
-																			<span class="project_category">2015 Speakers
-																			</span>
-																		</div>
-																	</article>
-
-																	<article class='mix portfolio_category_6 '>
-																		<div class='image_holder'>
-																			<a class='portfolio_link_for_touch' href='' target='_self'>
-																				<span class='image'><img width="400" height="400" src="http://i.imgur.com/VquwrSH.jpg" class="attachment-portfolio-square wp-post-image" alt="susan-lingle" /></span></a><span class='text_holder'><span class='text_outer'><span class='text_inner'><span class='feature_holder'><span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Susan Lingle' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom</a><a class='preview qbutton small white' href='http://i.imgur.com/VquwrSH.jpg' target='_self'>view</a><a class='preview qbutton small white' href='http://i.imgur.com/VquwrSH.jpg' target='_self'>bio</a></span></span></span></span></span></div><div class='portfolio_description'><h5 class="portfolio_title"><a href="" target="_self">Susan Lingle</a></h5><span class="project_category">2015 Speakers</span></div></article>
-
-																				<article class='mix portfolio_category_6 '>
-																					<div class='image_holder'>
-																						<a class='portfolio_link_for_touch' href='' target='_self'>
-																							<span class='image'>
-																								<img width="570" height="570" src="http://i.imgur.com/bdemA1W.jpg" class="attachment-portfolio-square wp-post-image" alt="leah-gazan" />
-																							</span>
-																						</a>
-																						<span class='text_holder'>
-																							<span class='text_outer'>
-																								<span class='text_inner'>
-																									<span class='feature_holder'>
-																										<span class="feature_holder_icons">
-																											<a class='lightbox qbutton small white' title='Leah Gazan' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
-																											</a>
-																											<a class='preview qbutton small white' href='http://i.imgur.com/smlAego.jpg' target='_self'>view</a>
-																											<a class='preview qbutton small white' href='http://i.imgur.com/smlAego.jpg' target='_self'>bio</a>
-																										</span>
-																									</span>
-																								</span>
-																							</span>
-																						</span>
-																					</div>
-																					<div class='portfolio_description'>
-																						<h5 class="portfolio_title">
-																							<a href="" target="_self">Leah Gazan</a>
-																						</h5>
-																						<span class="project_category">2015 Speakers
-																						</span>
-																					</div>
-																				</article>
-
-																				<article class='mix portfolio_category_6 '><div class='image_holder'><a class='portfolio_link_for_touch' href='' target='_self'><span class='image'><img width="333" height="333" src="http://i.imgur.com/yNac2Ov.jpg" class="attachment-portfolio-square wp-post-image" alt="ian-mauro" /></span></a><span class='text_holder'><span class='text_outer'><span class='text_inner'><span class='feature_holder'><span class="feature_holder_icons"><a class='lightbox qbutton small white' title='Ian Mauro' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom</a><a class='preview qbutton small white' href='http://i.imgur.com/uTQ5Ppy.jpg' target='_self'>view</a><a class='preview qbutton small white' href='http://i.imgur.com/uTQ5Ppy.jpg' target='_self'>bio</a></span></span></span></span></span></div><div class='portfolio_description'><h5 class="portfolio_title"><a href="" target="_self">Ian Mauro</a></h5><span class="project_category">2015 Speakers</span></div></article>
-
-																			</div>
-																		</div> -->
-
-																		<div class="separator  transparent center  " style="margin-top: 10px;margin-bottom: 33px;">
-																		</div> 
-
-																	</div> 
-																</div> 
-															</div>
-														</div>
-													</div>
-
-
-													<div    class="wpb_row section vc_row-fluid" style='background-color:#1e1e1e; padding-top:20pxpx; padding-bottom:20pxpx; text-align:center;'>
-
-
-														<div class=" full_section_inner clearfix">
-															<div class="  element_from_fade">
-																<div class="vc_span12 wpb_column column_container">
-																	<div class="wpb_wrapper">
-																	</div> 
-																</div>
-															</div>
-														</div> 
-
-														<div    class="wpb_row section vc_row-fluid grid_section" style=' text-align:left;'>
-															<div class=" section_inner clearfix">
-															<div class='section_inner_margin clearfix'>
-																<div class="vc_span12 wpb_column column_container">
-																	<div class="wpb_wrapper">
-
-																		<div class="separator  transparent center  " style="margin-top: 96px;margin-bottom: 0px;"></div> 
-																		<div class='testimonials_holder clearfix light'><div class="testimonials testimonials_carousel" data-show-navigation="no" data-animation-type="slide" data-animation-speed="" data-auto-rotate-slides="3"><ul class="slides"><li id="testimonials49" class="testimonial_content">
-																			<div class="testimonial_content_inner">
-																				<div class="testimonial_text_holder">
-																					<div class="testimonial_text_inner" style="color: #ffffff;"><p style='color:#ffffff;'><!-- EDIT ME --></p><p class="testimonial_author" style="color: #ffffff;"><!-- EDIT ME --></p>
-																					</div>
-																				</div>
-																			</div>
-																		</li><li id="testimonials48" class="testimonial_content"><div class="testimonial_content_inner">
-																		<div class="testimonial_text_holder">
-																			<div class="testimonial_text_inner" style="color: #ffffff;"><p style='color:#ffffff;'><!-- EDIT ME --></p><p class="testimonial_author" style="color: #ffffff;"><!-- EDIT ME --></p>
-																			</div>
-																		</div>
-																	</div>
-																</li></ul>
-															</div>
-														</div>
-
-														<div class="separator  transparent center  " style="margin-top: 60px;margin-bottom: 0px;">
-
-														</div>
-													</div> 
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div> 
-							</div> 
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- <div class="wpb_row section vc_row-fluid" style='background-color:#f7f7f7; padding-top:20pxpx; padding-bottom:20pxpx; text-align:center;'>
-				<div class=" full_section_inner clearfix">
-					<div class="  element_from_fade">
-						<div class="vc_span12 wpb_column column_container">
-							<div class="wpb_wrapper">
-								<div class="wpb_row section vc_row-fluid grid_section" style=' text-align:center;'>
-									<div class=" section_inner clearfix">
-										<div class='section_inner_margin clearfix'>
-											<div class="vc_span12 wpb_column column_container">
-												<div class="wpb_wrapper">
-
-												</div> 
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div> 
-						</div> 
-					</div>
-				</div>
-			</div> -->
-		</div>
-
-	</div> 
-</div>	
-
-</div>
-</div>
-<footer >
-	<div class="footer_inner clearfix">
-		<div class="footer_top_holder">
-			<div class="footer_top">
-				<div class="container">
-					<div class="container_inner">
-						<div class="two_columns_50_50 clearfix">
-							<div class="column1">
-								<div class="column_inner">
-									<div id="text-2" class="widget widget_text">
-										<h5>TEDx University of Winnipeg</h5>
-
-										<div class="separator  transparent center  " style="margin-top: 18px;margin-bottom: 2px;">
-										</div>
-
-										In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At our TEDxUniversityOfWinnipeg event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group.
-
-										<div class="separator  transparent center  " style="margin-top: 12px;margin-bottom: 2px;"></div>
-
-
-										<span class='q_social_icon_holder normal_social' >
-											<a href="https://twitter.com/tedxuwinnipeg" class="twitter-follow-button" data-show-count="false">
-												Follow</a>
-												<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-												</script>
-											<!--
-												<i class='fa fa-twitter fa-lg simple_social' style='font-size: 17px;'>
-												</i>
-											-->
-											
-										</a>
-									</span>
-
-									<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-									<!--
-										<span class='q_social_icon_holder normal_social' ><a href='https://plus.google.com' target='_blank'><i class='fa fa-google-plus fa-lg simple_social' style='font-size: 17px;'></i></a></span>
-									-->
-									<!--
-										<span class='q_social_icon_holder normal_social' ><a href='http://instagram.com' target='_blank'><i class='fa fa-instagram fa-lg simple_social' style='font-size: 17px;'></i></a></span>
-									-->
-									<!--
-										<span class='q_social_icon_holder normal_social' ><a href='https://www.tumblr.com' target='_blank'><i class='fa fa-tumblr fa-lg simple_social' style='font-size: 17px;'></i></a></span></div>
-									-->
-								</div>										</div>
-							</div>
-							<div class="column2">
-								<div class="column_inner">
-									<div class="two_columns_50_50 clearfix">
-										<div class="column1">
-											<div class="column_inner">
-												<!--<div id="recent-posts-10" class="widget widget_recent_entries">		<h5>Latest Blog Posts</h5>		<ul>
-													<li>
-														<a href="http://tedxcambridgeuniversity.org/hello-world/">Hello world!</a>
-														<span class="post-date">April 8, 2015</span>
-													</li>
-												</ul>-->
-											</div>												</div>
-										</div>
-										<div class="column2">
-											<div class="column_inner">
-												<div id="text-3" class="widget widget_text"><h5>More Links</h5>			
-													<div class="textwidget"><a href="https://www.ted.com/">Official TED Website</a>
-														<div class="separator  transparent center  " style="margin-top: 3px;margin-bottom: 9px;">
-														</div>
-
-
-														<a href="https://www.ted.com/about/programs-initiatives/tedx-program">Official TEDx Website</a>
-
-														<div class="separator  transparent center  " style="margin-top: 3px;margin-bottom: 9px;">
-														</div>
-
-
-														<a href="mailto:hazimhazimhazim@outlook.com">Contact Us</a>
-													</div>
-												</div>												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>							
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer_bottom_holder">
-				<div class="footer_bottom">
-					<div class="textwidget"><span>&copy; 2014 TEDxCambridgeUniversity | Website created by Ali Abdaal. | Website edited by Chris Johnson.</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-</div>
-</div>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var qodeLike = {"ajaxurl":"http:\/\/tedxcambridgeuniversity.org\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/qode-like.js?ver=1.0'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/plugins.js?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.carouFredSel-6.2.1.js?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.mousewheel.min.js?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.touchSwipe.min.js?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/lib/isotope/dist/isotope.pkgd.min.js?ver=4.2.3'></script>
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/default_dynamic.php?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/default.min.js?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/custom_js.php?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/comment-reply.min.js?ver=4.1.1'></script>
-<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/js/js_composer_front.js?ver=4.2.3'></script>
-<style type="text/css" data-type="vc-shortcodes-custom-css">.vc_custom_1405651578119{padding: 10px !important;background-color: rgba(0,0,0,0.39) !important;*background-color: rgb(0,0,0) !important;}</style></body>
+    <div id="fb-root"> 
+    </div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=337320103142292";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="ajax_loader">
+        <div class="ajax_loader_1">
+            <div class="double_pulse">
+                <div class="double-bounce1">
+
+                </div>
+                <div class="double-bounce2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="about" class="button fixedElement" >
+
+        <a href="/hello" onclick="javascript:unhide('link', 'about')" >This is a link</a>
+
+        <a id="about" href="/about" >About</a>
+
+        <a id="speakers" class="button" href="/speakers">
+            Speakers
+        </a>
+        <a id="team"  href="/team">
+            Team
+        </a>
+        <a id="tickets" href="/tickets" >
+            Tickets
+        </a>
+        <a id="sponsors" href="/sponsors" >
+            Sponsors
+        </a>
+        <a id="contact-us" href="/contact">
+            Contact us
+        </a>
+        <a id="home-page" href='/' class="button">
+            Home
+        </a>
+    </div>
+
+    <div id="about-page" style="display:none;">
+        <div class="copy text-left">
+            <p><strong>About TEDx, x = independently organized event</strong><br>
+                In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)</p>
+
+            <p><strong>About TED</strong><br>
+                TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman. </p>
+
+            <p>The annual TED Conference takes place each spring in Vancouver, British Columbia, along with the TEDActive simulcast event in nearby Whistler. The annual TEDGlobal conference will be held this October in Rio de Janeiro, Brazil. TED's media initiatives include TED.com, where new TED Talks are posted daily; the Open Translation Project, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get help translating their wishes into action; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.</p>
+
+            <p>Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>. </p>
+
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            <!-- Google Analytics start -->
+            <!-- Google Analytics end -->
+
+            <!-- Removed header -->
+            <div class="header_inner clearfix">
+
+                <div class="header_top_bottom_holder">
+
+
+                    <a id='back_to_top' href='#'>
+                        <span class="fa-stack">
+                            <i class="fa fa-arrow-up" style=""></i>
+                        </span>
+                    </a>
+
+
+                    <div class="content ">
+
+                        <div class="content_inner  ">
+                            <div class="q_slider">
+                                <div class="q_slider_inner">
+                                    <div id="qode-home-slider-4"  class="carousel slide  full_screen  q_auto_start   " data-slide_animation="6000"  data-parallax="yes" style=" ">
+
+                                        <div class="carousel-inner " data-start="transform: translateY(0px);" data-1440="transform: translateY(-500px);">
+                                            <div class="item light"  style="">
+                                                <div class="image" style="background-image:url(http://i.imgur.com/AI1EBVy.jpg);">
+                                                    <img src="http://i.imgur.com/Szo9Np3" alt="Homepage">
+                                                </div>
+                                                <div class="slider_content_outer">
+                                                    <div class="slider_content " style="width:90%;left:5%;top:20%;" data-start="width:90%; opacity:1; left:5%; top:20%;" data-300="opacity: 0; left:5%; top:10%;">
+                                                        <div class="thumb fade" id="tedxuniversityofwinnipegheader">
+                                                            <img src="http://i.imgur.com/YbAnJ0H.png" alt="Homepage">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>			
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <footer>
+        <div style="display:none"class="footer_inner clearfix">
+            <div class="footer_top_holder">
+                <div class="footer_top">
+                    <div class="container">
+                        <div class="container_inner">
+                            <div class="two_columns_50_50 clearfix">
+                                <div class='CHANGEME'>
+                                    <div class="column1">
+                                        <div class="column_inner">
+                                            <div id="text-2" class="widget widget_text">
+                                                <h5>
+                                                    TEDx University of Winnipeg
+                                                </h5>
+
+                                                <div class="separator  transparent center  " style="margin-top: 18px;margin-bottom: 2px;">
+                                                </div>
+
+                                                In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At our TEDxUniversityOfWinnipeg event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group.
+
+                                                <div class="separator  transparent center  " style="margin-top: 12px;margin-bottom: 2px;">
+
+                                                </div>
+
+
+                                                <span class='q_social_icon_holder normal_social' >
+                                                    <a href="https://twitter.com/tedxuwinnipeg" class="twitter-follow-button" data-show-count="false">
+                                                        Follow
+                                                    </a>
+                                                    <script>
+                                                        !function (d, s, id) {
+                                                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                                            if (!d.getElementById(id)) {
+                                                                js = d.createElement(s);
+                                                                js.id = id;
+                                                                js.src = p + '://platform.twitter.com/widgets.js';
+                                                                fjs.parentNode.insertBefore(js, fjs);
+                                                            }
+                                                        }(document, 'script', 'twitter-wjs');
+                                                    </script>
+                                                    <!--
+                                                            <i class='fa fa-twitter fa-lg simple_social' style='font-size: 17px;'>
+                                                            </i>
+                                                    -->
+
+
+                                                </span>
+
+                                                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true">
+
+                                                </div>
+                                                <!--
+                                                        <span class='q_social_icon_holder normal_social' ><a href='https://plus.google.com' target='_blank'><i class='fa fa-google-plus fa-lg simple_social' style='font-size: 17px;'></i></a></span>
+                                                -->
+                                                <!--
+                                                        <span class='q_social_icon_holder normal_social' ><a href='http://instagram.com' target='_blank'><i class='fa fa-instagram fa-lg simple_social' style='font-size: 17px;'></i></a></span>
+                                                -->
+                                                <!--
+                                                        <span class='q_social_icon_holder normal_social' ><a href='https://www.tumblr.com' target='_blank'><i class='fa fa-tumblr fa-lg simple_social' style='font-size: 17px;'></i></a></span></div>
+                                                -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column2">
+                                    <div class="column_inner">
+                                        <div class="two_columns_50_50 clearfix">
+                                            <div class="column1">
+                                                <div class="column_inner">
+                                                </div>											
+                                            </div>
+                                        </div>
+                                        <div class='contact-us' onclick='task'>
+                                            <div class="column2">
+                                                <div class="column_inner">
+                                                    <div id="text-3" class="widget widget_text">
+                                                        <h5>
+                                                            More Links
+                                                        </h5>			
+                                                        <div class="textwidget">
+                                                            <a href="https://www.ted.com/">
+                                                                Official TED Website
+                                                            </a>
+                                                            <div class="separator  transparent center  " style="margin-top: 3px;margin-bottom: 9px;">
+                                                            </div>
+
+
+                                                            <a href="https://www.ted.com/about/programs-initiatives/tedx-program">
+                                                                Official TEDx Website
+                                                            </a>
+
+                                                            <div class="separator  transparent center  " style="margin-top: 3px;margin-bottom: 9px;">
+                                                            </div>
+
+
+                                                            <a href="mailto:hazimhazimhazim@outlook.com">
+                                                                Contact Us
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div style="display:none" class="wpb_row section vc_row-fluid" style='background-color:#f7f7f7; text-align:left;'>
+            <div class=" full_section_inner clearfix">
+                <div class="vc_span12 wpb_column column_container">
+                    <div class="wpb_wrapper">
+
+
+                        <div class="wpb_row section vc_row-fluid grid_section" style=' text-align:left;'>
+                            <div class=" section_inner clearfix" style="display:none">
+                                <div class='section_inner_margin clearfix'>
+                                    <div class="vc_span6 wpb_column column_container" style="display:none">
+                                        <div class="wpb_wrapper">
+                                            <div class="separator  transparent center  " style="margin-top: 96px;margin-bottom: 0px;">
+                                            </div>
+                                            <div class="custom_font_holder" style="font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;">
+                                                WHAT IS 
+                                                <span style="color: #e62b1e;">
+                                                    TEDx
+                                                </span>?
+                                            </div>
+                                            <div class="separator  transparent center  " style="margin-top: 19px;margin-bottom: 21px;">
+                                            </div>
+
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <p style="text-align: left;">
+                                                        <span style="color: #333333;">
+                                                            In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUniversityOfWinnipeg, where x = independently organised TED event. At our TEDxUniversityOfWinnipeg event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.
+                                                        </span>
+                                                    </p>
+                                                    <p style="text-align: left;">
+
+                                                    </p>
+
+
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                    </div>
+
+                                    <div class="vc_span6 wpb_column column_container">
+                                        <div class="wpb_wrapper">
+                                            <div class="separator  transparent center  " style="margin-top: 96px;margin-bottom: 0px;">
+                                            </div>
+                                            <div class="custom_font_holder" style="font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;"><span style="color: #e62b1e;">EVENT</span> DETAILS
+                                            </div>
+                                            <div class="separator  transparent center  " style="margin-top: 19px;margin-bottom: 21px;">
+                                            </div>
+
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <p style="text-align: left;">
+                                                        We&#8217;ll be updating this page with event information as we get it. Please check back later!
+                                                    </p>
+                                                    <p style="text-align: left;">
+                                                    </p>
+
+                                                </div>
+                                            </div> 
+                                            <div class="separator  transparent center  " style="margin-top: 5pxpx;margin-bottom: 5pxpx;">
+                                            </div>
+                                            <div class="q_icon_list"><i class="fa fa-location-arrow pull-left transparent " style="color:#e62b1e;"></i><p style="color:#333333;font-size: 17px;">In Eckhardt-Graham Hall!</p>
+                                            </div>
+                                            <div class="q_icon_list"><i class="fa fa-calendar-o pull-left transparent " style="color:#e62b1e;"></i><p style ="color:#333333;font-size: 17px;">September 25, 2015</p>
+                                            </div>
+                                            <div class="q_icon_list"><i class="fa fa-clock-o pull-left transparent " style="color:#e62b1e;"></i><p style="color:#333333;font-size: 17px;">4 PM - 9 PM</p>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="separator  transparent center  " style="margin-top: 96px;margin-bottom: 0px;">
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+
+
+        <div  style="display:none"  class="wpb_row section vc_row-fluid grid_section" style='background-color:#ffffff; padding-top:88px; text-align:left;'>
+            <div class=" section_inner clearfix">
+                <div class='section_inner_margin clearfix'>
+                    <div class="vc_span12 wpb_column column_container">
+                        <div class="wpb_wrapper">
+
+                            <div class="wpb_text_column wpb_content_element  homeh2">
+                                <div class="wpb_wrapper">
+                                    <h2 style="text-align: center;">
+                                        WELCOME TO 
+                                        <span style="color: #ff0000;">
+                                            TEDx 
+                                        </span>
+                                        UNIVERSITY OF WINNIPEG
+                                    </h2>
+
+                                </div> 
+                            </div> 
+                            <div class="separator  transparent center  " style="margin-top: 13px;margin-bottom: 0px;">
+                            </div>
+
+                            <div class="wpb_text_column wpb_content_element ">
+                                <div class="wpb_wrapper">
+                                    <h5 style="text-align: center;">
+                                        <!--BOTTOM TEXT-->
+                                    </h5>
+
+                                </div>
+                            </div>
+                            <div class="separator  transparent center  " style="margin-top: 64px;margin-bottom: 0px;">
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div style="display:none" data-q_id="#portfolio"  data-q_title="Portfolio List"  data-q_icon="fa-list" class="wpb_row section vc_row-fluid grid_section" style='background-color:#ffffff; padding-top:93px; padding-bottom:142px; text-align:left;'>
+
+            <div class=" section_inner clearfix">
+                <div class='section_inner_margin clearfix'>
+                    <div class="vc_span12 wpb_column column_container">
+                        <div class="wpb_wrapper">
+                            <div class="separator  small center  " style="margin-top: 19px;margin-bottom: 21px;background-color: #e2e2e2;">
+                            </div>
+                            <div class="custom_font_holder" style="font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;">
+                                <span style="color: #e62b1e;">
+                                    OUR
+                                </span> 
+                                TEAM
+                            </div>
+                            <div class="separator  small center  " style="margin-top: 19px;margin-bottom: 21px;background-color: #e2e2e2;">
+                            </div>
+
+                            <div class="wpb_text_column wpb_content_element ">
+                                <div class="wpb_wrapper">
+                                    <p style="text-align: left;">
+                                    </p>
+
+                                </div> 
+                            </div> 
+                            <div class="separator  transparent center  " style="margin-top: 10px;margin-bottom: 33px;">
+                            </div>
+                            <div class='projects_holder_outer v4 portfolio_with_space'>
+                                <div class='projects_holder clearfix v4 standard'>
+                                    <div class="cycle-slideshow" data-cycle-slides="div">
+                                        <div class="three-at-a-time">
+                                            <article class='mix portfolio_category_6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='http://i.imgur.com/wQ8AJgb.jpg' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="570" height="570" src="http://i.imgur.com/wQ8AJgb.jpg" class="attachment-portfolio-square wp-post-image" alt="hazim-ismail" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='text_inner'>
+                                                                <span class='feature_holder'>
+                                                                    <span class="feature_holder_icons">
+                                                                        <a class='lightbox qbutton small white' title='Hazim Ismail' href='http://i.imgur.com/wQ8AJgb.jpg' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/wQ8AJgb.jpg' target='_self'>
+                                                                            view
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/wQ8AJgb.jpg' target='_self'>
+                                                                            bio
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class='portfolio_description'>
+                                                    <h5 class="portfolio_title">
+                                                        <a href="http://i.imgur.com/wQ8AJgb.jpg" target="_self">Hazim Ismail</a>
+                                                    </h5>
+                                                    <h3 class="job_title">
+                                                        Lead Organizer <!--Go Hazim! -->
+                                                    </h3>
+                                                    <span class="project_category">2015 Speakers
+                                                    </span>
+                                                </div>
+                                            </article>
+
+                                            <article class='mix portfolio_category_6'>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="570" height="570" src="http://i.imgur.com/s9TJTAB.png?1" class="attachment-portfolio-square wp-post-image" alt="bilguundari-enkhtugs" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='text_inner'>
+                                                                <span class='feature_holder'>
+                                                                    <span class="feature_holder_icons">
+                                                                        <a class='lightbox qbutton small white' title='Bilguundari Enkhtugs' href='http://i.imgur.com/OqauXpJ.png?1' data-rel='prettyPhoto[pretty_photo_gallery]'>zoom
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' 
+                                                                           href='http://i.imgur.com/s9TJTAB.png?1' target='_self'>
+                                                                            view
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' 
+                                                                           href='http://i.imgur.com/s9TJTAB.png?1' target='_self'>
+                                                                            bio
+
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class='portfolio_description'>
+                                                    <h5 class="portfolio_title">
+                                                        <a href="http://i.imgur.com/s9TJTAB.png?1" target="_self">Bilguundari Enkhtugs
+                                                        </a>
+                                                    </h5>
+                                                    <h3 class="job_title">
+                                                        Legal
+                                                    </h3>
+                                                    <span class="project_category">
+                                                        2015 Speakers
+                                                    </span>
+                                                </div>
+                                            </article>
+
+                                            <article class='mix portfolio_category_6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="400" height="400" src="http://i.imgur.com/jcPTKZH.jpg?1" class="attachment-portfolio-square wp-post-image" alt="julia-burakova" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='text_inner'>
+                                                                <span class='feature_holder'>
+                                                                    <span class="feature_holder_icons">
+                                                                        <a class='lightbox qbutton small white' title='Julia Burakova' href='http://i.imgur.com/jcPTKZH.jpg?1' data-rel='prettyPhoto[pretty_photo_gallery]'>
+                                                                            zoom
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/jcPTKZH.jpg?1' target='_self'>
+                                                                            view
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class='portfolio_description'>
+                                                    <h5 class="portfolio_title">
+                                                        <a href="http://i.imgur.com/jcPTKZH.jpg?1" target="_self">Julia Burakova
+                                                        </a>
+                                                    </h5>
+                                                    <h3 class="job_title">
+                                                        Hospitality
+                                                    </h3>
+                                                    <span class="project_category">
+                                                        2015 Speakers
+                                                    </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class='three-at-a-time'>
+                                            <article class='mix portfolio_category_6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="400" height="400" src="http://i.imgur.com/meYMbJK.jpg?2" class="attachment-portfolio-square wp-post-image" alt="Dele-Ojewole" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='text_inner'>
+                                                                <span class='feature_holder'>
+                                                                    <span class="feature_holder_icons">
+                                                                        <a class='lightbox qbutton small white' title='Dele Ojewole' href='http://getshrekt.com' data-rel='prettyPhoto[pretty_photo_gallery]'>
+                                                                            zoom
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/meYMbJK.jpg?2' target='_self'>
+                                                                            view
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class='portfolio_description'>
+                                                    <h5 class="portfolio_title">
+                                                        <a href="http://i.imgur.com/meYMbJK.jpg?2" target="_self">
+                                                            Dele Ojewole
+                                                        </a>
+                                                    </h5>
+                                                    <h3 class="job_title">
+                                                        Publicity
+                                                    </h3>
+                                                    <span class="project_category">
+                                                        2015 Speakers
+                                                    </span>
+                                                </div>
+                                            </article>                            
+                                            <article class='mix portfolio_category_6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="400" height="400" src="http://i.imgur.com/s7LePUF.jpg?1" class="attachment-portfolio-square wp-post-image" alt="chris-johnson" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='feature_holder'>
+                                                                <span class="feature_holder_icons">
+                                                                    <a class='lightbox qbutton small white' title='Chris Johnson' href='http://i.imgur.com/s7LePUF.jpg?1' data-rel='prettyPhoto[pretty_photo_gallery]'>
+                                                                        zoom
+                                                                    </a>
+                                                                    <a class='preview qbutton small white' href='http://i.imgur.com/s7LePUF.jpg?1' target='_self'>
+                                                                        view
+                                                                    </a>
+                                                                    <a class='preview qbutton small white' href='http://i.imgur.com/s7LePUF.jpg?1' target='_self'>                                                                                                                                                                    
+                                                                        bio
+                                                                    </a>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+
+                                                    <div class='portfolio_description'>
+                                                        <h5 class="portfolio_title">
+                                                            <a href="http://i.imgur.com/s7LePUF.jpg?1" target="_self">
+                                                                Chris Johnson
+                                                            </a>
+                                                        </h5>
+                                                        <h3 class="job_title">                                      
+                                                            Web Design
+                                                        </h3>
+                                                        <span class="project_category">
+                                                            2015 Speakers
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class='mix portfolio_category_6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='http://i.imgur.com/lfJEsrD.jpg?1' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="400" height="400" src="http://i.imgur.com/lfJEsrD.jpg?1" class="attachment-portfolio-square wp-post-image" alt="brianne-mckay" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='feature_holder'>
+                                                                <span class="feature_holder_icons">
+                                                                    <a class='lightbox qbutton small white' title='Brianne McKay' href='http://i.imgur.com/lfJEsrD.jpg?1' data-rel='prettyPhoto[pretty_photo_gallery]'>
+                                                                        zoom
+                                                                    </a>
+                                                                    <a class='preview qbutton small white' href='http://i.imgur.com/lfJEsrD.jpg?1' target='_self'>
+                                                                        view
+                                                                    </a>
+                                                                    <a class='preview qbutton small white' href='http://i.imgur.com/lfJEsrD.jpg?1' target='_self'>                                                                                                                                                                    
+                                                                        bio
+                                                                    </a>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+
+                                                    <div class='portfolio_description'>
+                                                        <h5 class="portfolio_title">
+                                                            <a href='http://i.imgur.com/lfJEsrD.jpg?1' target="_self">
+                                                                Brianne McKay
+                                                            </a>
+                                                        </h5>
+                                                        <h3 class="job_title">                                      
+                                                            Hospitality
+                                                        </h3>
+                                                        <span class="project_category">
+                                                            2015 Speakers
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class='three-at-a-time'>
+                                            <article class='mix portfolio_category  _6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="333" height="333" src="http://i.imgur.com/U7Ca7jZ.jpg" class="attachment-portfolio-square wp-post-image" alt="wei-li" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='text_inner'>
+                                                                <span class='feature_holder'>
+                                                                    <span class="feature_holder_icons">
+                                                                        <a class='lightbox qbutton small white' title='Wei Li' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>
+                                                                            zoom
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/U7Ca7jZ.jpg' target='_self'>
+                                                                            pic
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/U7Ca7jZ.jpg' target='_self'>
+                                                                            bio
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class='portfolio_description'>
+                                                    <h5 class="portfolio_title">
+                                                        <a href="http://i.imgur.com/U7Ca7jZ.jpg" target="_self">
+                                                            Wei Li
+                                                        </a>
+                                                    </h5>
+                                                    <h3 class="job_title">
+                                                        Finance
+                                                    </h3>
+                                                    <span class="project_category">
+                                                        2015 Speakers   
+                                                    </span>
+                                                </div>
+                                            </article>
+
+                                            <article class='mix portfolio_category_6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="300" height="300" src="http://i.imgur.com/XaZxZ48.jpg" class="attachment-portfolio-square wp-post-image" alt="oksana-potapchik" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='text_inner'>
+                                                                <span class='feature_holder'>
+                                                                    <span class="feature_holder_icons">
+                                                                        <a class='lightbox qbutton small white' title='Oksana Potaochik' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>
+                                                                            zoom
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/XaZxZ48.jpg' target='_self'>
+                                                                            view
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/XaZxZ48.jpg' target='_self'>
+                                                                            bio
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class='portfolio_description'>
+                                                    <h5 class="portfolio_title">
+                                                        <a href="http://i.imgur.com/XaZxZ48.jpg" target="_self">
+                                                            Oksana Potapchik
+                                                        </a>
+                                                    </h5>
+                                                    <h3 class="job_title">
+                                                        Sponsorship
+                                                    </h3>
+                                                    <span class="project_category">
+                                                        2015 Speakers
+                                                    </span>
+                                                </div>
+                                            </article>
+
+                                            <article class='mix portfolio_category_6 '>
+                                                <div class='image_holder'>
+                                                    <a class='portfolio_link_for_touch' href='' target='_self'>
+                                                        <span class='image'>
+                                                            <img width="400" height="400" src="http://i.imgur.com/nHaUKiJ.jpg?1" class="attachment-portfolio-square wp-post-image" alt="parth-brahmbhatt" />
+                                                        </span>
+                                                    </a>
+                                                    <span class='text_holder'>
+                                                        <span class='text_outer'>
+                                                            <span class='text_inner'>
+                                                                <span class='feature_holder'>
+                                                                    <span class="feature_holder_icons">
+                                                                        <a class='lightbox qbutton small white' title='Parth Brahmbhatt' href='' data-rel='prettyPhoto[pretty_photo_gallery]'>
+                                                                            zoom
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/nHaUKiJ.jpg?1' target='_self'>
+                                                                            view
+                                                                        </a>
+                                                                        <a class='preview qbutton small white' href='http://i.imgur.com/nHaUKiJ.jpg?1' target='_self'>
+                                                                            bio
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class='portfolio_description'>
+                                                    <h5 class="portfolio_title">
+                                                        <a href="http://i.imgur.com/nHaUKiJ.jpg?1" target="_self">
+                                                            Parth Brahmbhatt
+                                                        </a>
+                                                    </h5>
+                                                    <h3 class="job_title">
+                                                        Sponsorship
+                                                    </h3>
+                                                    <span class="project_category">
+                                                        2015 Speakers
+                                                    </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="separator  transparent center  " style="margin-top: 10px;margin-bottom: 33px;">
+                            </div> 
+
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+        <div class='page-footer'>
+            <div class="footer_bottom_holder">
+                <div class="footer_bottom">
+                    <div class="textwidget">
+                        <span>
+                            This independent TEDx event is operated under license from TED.
+                            <br>
+                            &copy; 2015 TEDxUniversityOfWinnipeg |  Website created by Chris Johnson.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var qodeLike = {"ajaxurl": "http:\/\/tedxcambridgeuniversity.org\/wp-admin\/admin-ajax.php"};
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/qode-like.js?ver=1.0'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/plugins.js?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.carouFredSel-6.2.1.js?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.mousewheel.min.js?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.touchSwipe.min.js?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/lib/isotope/dist/isotope.pkgd.min.js?ver=4.2.3'></script>
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/default_dynamic.php?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/default.min.js?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/custom_js.php?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/comment-reply.min.js?ver=4.1.1'></script>
+    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/js/js_composer_front.js?ver=4.2.3'></script>
+    <style type="text/css" data-type="vc-shortcodes-custom-css">.vc_custom_1405651578119{padding: 10px !important;background-color: rgba(0,0,0,0.39) !important;*background-color: rgb(0,0,0) !important;}
+    </style>
+</body>
 </html>
