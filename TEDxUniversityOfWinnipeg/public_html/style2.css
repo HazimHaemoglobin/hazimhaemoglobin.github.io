@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-May-2015, 9:14:58 PM
+    Author     : krys
+*/
+
+
+.taskbar{
+    text-align: justify;
+}
+
+.taskbar-text{
+    display: inline;
+}
+
+.fixedElement {
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    left:auto;
+    padding: 5px 10px; /* some styling, please note overall height of the object will be 35px due to 5px padding on top/bottom. */
+    border-bottom: 1px solid #333; /* some styling */
+    background-color: #fa2900;
+    position:absolute;
+    top:0;
+    width:100%;
+}.navbar {
+    width: 100%;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+.navbar div {
+    list-style-type: none; /*to remove bullets*/
+    text-align: center;
+    padding: 0px;
+    zoom:1;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.navbar a{
+    padding: 2px;
+    width: 150px;
+    display: inline-block;
+    color:white;
+}
+
+
+
+div.panel,p.flip{
+    margin:0px;
+    padding:5px;
+    text-align:center;
+    background:#ddd;
+    border:solid 1px #fff;
+}
+div.panel{
+    width:50%;
+    height:100px;
+    display:none;
+}
