@@ -48,6 +48,26 @@ and open the template in the editor.
     color:white;
 }
 
+.footer {
+    width: 100%;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+.footer div {
+    list-style-type: none; /*to remove bullets*/
+    text-align: center;
+    padding: 0px;
+    zoom:1;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.footer span{
+    padding: 2px;
+    width: 150px;
+    display: inline-block;
+    color:white;
+}
+
 
 
 div.panel,p.flip{
@@ -68,11 +88,15 @@ div.panel{
     -webkit-box-shadow: 0 0 30px 5px;
 }
 .showBio{
-    background-color: white;
-    position:fixed;
-    top:50%;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right:500px;
+    margin-bottom:20px;
+    background-color: transparent;
+    position:relative;
+/*    top:50%;
     left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 
