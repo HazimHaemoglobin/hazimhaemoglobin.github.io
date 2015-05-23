@@ -142,25 +142,25 @@
 
     <div id="taskbar" class="fixedElement navbar" style='position:fixed; z-index: 99999999; text-align:center;  ' >
 
-        <a id="about-show" onclick="showDiv('about-div')">
+        <a id="about-show" onclick="showDiv('about-div'); showSchool('wrapper-div');">
             ABOUT</a>
 
-        <a id="speakers-show"  onclick="showDiv('speakers-div')">
+        <a id="speakers-show" onclick="showDiv('speakers-div')">
             SPEAKERS
         </a>
-        <a id="team-show"   onclick="showDiv('team-div')">
+        <a id="team-show" onclick="showDiv('team-div')">
             TEAM
         </a>
-        <a id="tickets-show"  onclick="showDiv('tickets-div')">
+        <a id="tickets-show" onclick="showDiv('tickets-div')">
             TICKETS
         </a>
-        <a id="sponsors-show"  onclick="showDiv('sponsors-div')" >
+        <a id="sponsors-show" onclick="showDiv('sponsors-div')" >
             SPONSORS
         </a>
-        <a id="contact-us-show"  onclick="showDiv('contact_us-div')">
+        <a id="contact-us-show" onclick="showDiv('contact_us-div')" >
             CONTACT US
         </a>
-        <a id="home-page-show"   onclick="showDiv('home-div')">
+        <a id="home-page-show" onclick="showDiv('home-div')">
             HOME
         </a>
         <!--
@@ -200,12 +200,12 @@
 
             <div id='danny-blair_bio' style="display:none;">
                 <p>
-                <strong>
-                    Danny Blair
-                </strong><br>
+                    <strong>
+                        Danny Blair
+                    </strong><br>
 
-                Dr. Danny Blair’s research interests and activities are largely concerned with the detection and characterization of climate variability and change on the Canadian prairies. He is interested in the effects that large-scale teleconnections (i.e., ENSO, PNA, PDO, AO) have on the prairie climate and is very concerned about the impacts that global warming is having, and will have, on the region.  
-                He is a professor in the Department of Geography at The University of Winnipeg and was named the PARC-Manitoba Hydro Climate Change Research Professor in 2004. Most recently, he became the Director of the Climate Studies Institute at The University of Winnipeg’s Global College. Blair is also an adjunct professor at the University of Manitoba, Co-Chair of Manitoba’s Climate Change Connection, and a frequent contributor to newspaper, radio, and television stories about climate variability and global warming.
+                    Dr. Danny Blair’s research interests and activities are largely concerned with the detection and characterization of climate variability and change on the Canadian prairies. He is interested in the effects that large-scale teleconnections (i.e., ENSO, PNA, PDO, AO) have on the prairie climate and is very concerned about the impacts that global warming is having, and will have, on the region.  
+                    He is a professor in the Department of Geography at The University of Winnipeg and was named the PARC-Manitoba Hydro Climate Change Research Professor in 2004. Most recently, he became the Director of the Climate Studies Institute at The University of Winnipeg’s Global College. Blair is also an adjunct professor at the University of Manitoba, Co-Chair of Manitoba’s Climate Change Connection, and a frequent contributor to newspaper, radio, and television stories about climate variability and global warming.
                 </p>
 
             </div>
@@ -228,6 +228,14 @@
                     Harsha Walia is a social justice activist and journalist who is best known for co-founding the Vancouver chapter of No One Is Illegal. Walia's writings have appeared in over fifty journals, anthologies, and magazines, including Briarpatch, Canadian Dimension, Feministing, FUSE Magazine, Left Turn, People of Color Organize, Rabble, Z Magazine, The Winter We Danced, and others. She has contributed essays to academic journals including Race and Class, as well as chapters in the anthologies Power of Youth: Youth and community-led activism in Canada; Beautiful Trouble: A Toolbox for Revolution; and Organize! Building from the Local for Global Justice. She is the author of the bookUndoing Border Imperialism, which indigenous rights activist Roxanne Dunbar-Ortiz has called, "the first extended work on immigration that refuses to make First Nationssovereignty invisible." 
                     Walia has made a number of presentations to the United Nations on social and economic justice issues and is a commentator and speaker at conferences, campuses, and media outlets across North America. Most recently, Walia has organized protests against the non-consensual filming of undocumented immigrants being arrested on the television show Border Security: Canada's Front Line. Walia asserted that National Geographic, the distributor of the show, was profiting from “the violence of detention and deportation.” Award-winning author Naomi Klein has called Walia “one of Canada’s most brilliant and effective political organizers.” 
                 </p>
+            </div>
+
+            <div id="claudyne-chevrier_bio" style="display:none" >
+                <p>
+                    <strong style="color:#fa2900;">
+                        Claudyne Chevrier
+                    </strong>
+                    Claudyne Chevrier completed a Bachelor in Anthropology at Université de Montréal (2008) and a Masters in Community Health (2012) in the Social and Preventive Medicine Department of the same university. Her  specific  interests  lie  in  the  interactions  between  social  determinants  of  health and  social inequalities  and  the  accessibility  to  quality  health  care, particularly in relations to gender inequalities. For her Masters thesis, she completed 4 months of field work in Mysore, India, in a sex workers organization focusing on the HIV/AIDS-related care and support services that they organize for their members. Her Ph.D project focuses on the history of intervientions around the sex trade in Winnipeg, and on access to health care for sex trade workers. Claudyne is a Manitoba Health Research Council Graduate Fellow and a trainee in the CIHR International Infectious Disease and Global Health Training Program.  
             </div>
         </div>
 
@@ -323,13 +331,6 @@
                     </p>
                 </div>
 
-                <div id="claudyne-chevrier_bio" style="display:none" >
-                    <p>
-                        <strong style="color:#fa2900;">
-                            Claudyne Chevrier
-                        </strong>
-                        Claudyne Chevrier completed a Bachelor in Anthropology at Université de Montréal (2008) and a Masters in Community Health (2012) in the Social and Preventive Medicine Department of the same university. Her  specific  interests  lie  in  the  interactions  between  social  determinants  of  health and  social inequalities  and  the  accessibility  to  quality  health  care, particularly in relations to gender inequalities. For her Masters thesis, she completed 4 months of field work in Mysore, India, in a sex workers organization focusing on the HIV/AIDS-related care and support services that they organize for their members. Her Ph.D project focuses on the history of intervientions around the sex trade in Winnipeg, and on access to health care for sex trade workers. Claudyne is a Manitoba Health Research Council Graduate Fellow and a trainee in the CIHR International Infectious Disease and Global Health Training Program.  
-                </div>
             </div>
         </div>
     </div>
@@ -386,10 +387,8 @@
     </div> 
 
 
-    <div id="taskbar-divs" class='taskbar-elements' style='position:relative;  background-color:white; z-index: 999999; text-align:left;' onclick="showSchool('wrapper-div')">
-
-
-        <div id="about-div" style="display:none; ">
+    <div id="taskbar-divs" class='taskbar-elements' style='position:relative;  background-color:white; z-index: 999999; text-align:left;' onclick="showSchool('wrapper-div');">
+        <div id="about-div" style="display:none;" ">
 
             <div class='page-footer'>
                 <div class="footer_bottom_holder">
@@ -504,7 +503,8 @@
                                                 </div>											
                                             </div>
                                         </div>
-                                        <div class='contact-us' onclick='task'>
+
+                                        <div class='contact-us'>
                                             <div class="column2">
                                                 <div class="column_inner">
                                                     <div id="text-3" class="widget widget_text">
@@ -682,10 +682,11 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href="http://i.imgur.com/wQ8AJgb.jpg" target="_self">Hazim Ismail</a>
+                                                        <a href="http://i.imgur.com/wQ8AJgb.jpg" target="_self"><strong>Hazim Ismail</strong></a>
                                                     </h5>
-                                                    <h3 class="job_title">
+                                                    <h3 class="job_title"><font color="red">
                                                         Lead Organizer <!--Go Hazim! -->
+                                                        </font>
                                                     </h3>
                                                 </div>
                                             </article>
@@ -720,11 +721,11 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href="http://i.imgur.com/s9TJTAB.png?1" target="_self">Bilguundari Enkhtugs
+                                                        <a href="http://i.imgur.com/s9TJTAB.png?1" target="_self"><strong>Bilguundari Enkhtugs</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class="job_title">
-                                                        Legal
+                                                    <h3 class="job_title"><font color="red">
+                                                        Legal</font>
                                                     </h3>
                                                 </div>
                                             </article>
@@ -757,11 +758,11 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href="http://i.imgur.com/jcPTKZH.jpg?1" target="_self">Julia Burakova
+                                                        <a href="http://i.imgur.com/jcPTKZH.jpg?1" target="_self"><strong>Julia Burakova</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class="job_title">
-                                                        Hospitality
+                                                    <h3 class="job_title"><font color='red'>
+                                                        Hospitality</font>
                                                     </h3>
                                                 </div>
                                             </article>
@@ -799,11 +800,11 @@
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
                                                         <a href="http://i.imgur.com/meYMbJK.jpg?2" target="_self">
-                                                            Dele Ojewole
+                                                            <strong>Dele Ojewole</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class="job_title">
-                                                        Publicity
+                                                    <h3 class="job_title"><font color='red'>
+                                                        Publicity</font>
                                                     </h3>
                                                 </div>
                                             </article>     
@@ -839,12 +840,13 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href="http://i.imgur.com/s7LePUF.jpg?1" target="_self">
-                                                            Chris Johnson
+                                                        <a href="http://i.imgur.com/s7LePUF.jpg?1" target="_self"><strong>
+                                                                Chris Johnson</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class="job_title">                                      
-                                                        Web Design
+                                                    <h3 class="job_title">           
+                                                        <font color='red'>
+                                                        Web Design</font>
                                                     </h3>
                                                 </div>
 
@@ -881,12 +883,12 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href='http://i.imgur.com/lfJEsrD.jpg?1' target="_self">
-                                                            Brianne McKay
+                                                        <a href='http://i.imgur.com/lfJEsrD.jpg?1' target="_self"><strong>
+                                                                Brianne McKay</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class="job_title">                                      
-                                                        Hospitality
+                                                    <h3 class="job_title"><font color='red'>                          
+                                                        Hospitality</font>
                                                     </h3>
                                                 </div>
 
@@ -922,12 +924,13 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href="http://i.imgur.com/U7Ca7jZ.jpg" target="_self">
-                                                            Wei Li
+                                                        <a href="http://i.imgur.com/U7Ca7jZ.jpg" target="_self"><strong>
+                                                                Wei Li</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class="job_title">
+                                                    <h3 class="job_title"><font color='red'>
                                                         Finance
+                                                        </font>
                                                     </h3>
                                                 </div>
                                             </article>
@@ -959,12 +962,13 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href="http://i.imgur.com/XaZxZ48.jpg" target="_self">
-                                                            Oksana Potapchik
+                                                        <a href="http://i.imgur.com/XaZxZ48.jpg" target="_self"><strong>
+                                                                Oksana Potapchik</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class='job_title'>
-                                                        Hospitality
+                                                    <h3 class='job_title'><font color='red'>
+
+                                                        Hospitality</font>
                                                     </h3>
                                                 </div>
                                             </article>
@@ -997,12 +1001,12 @@
                                                 </div>
                                                 <div class='portfolio_description'>
                                                     <h5 class="portfolio_title">
-                                                        <a href="http://i.imgur.com/nHaUKiJ.jpg?1" target="_self">
-                                                            Parth Brahmbhatt
+                                                        <a href="http://i.imgur.com/nHaUKiJ.jpg?1" target="_self"><strong>
+                                                                Parth Brahmbhatt</strong>
                                                         </a>
                                                     </h5>
-                                                    <h3 class="job_title">
-                                                        Sponsorship
+                                                    <h3 class="job_title"><font color='red'>
+                                                        Sponsorship</font>
                                                     </h3>
                                                 </div>
                                             </article>
