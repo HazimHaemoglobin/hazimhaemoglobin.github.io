@@ -31,6 +31,9 @@
         function showSchool(school) {
             document.getElementById(school).style.display = "none";
         }
+        function hideSchool(school){
+            document.getElementById(school).style.display="inline";
+        }
 
         function scrollTo(id) {
             window.scrollTo(0, 50);
@@ -145,22 +148,22 @@
         <a id="about-show" onclick="showDiv('about-div'); showSchool('wrapper-div');">
             ABOUT</a>
 
-        <a id="speakers-show" onclick="showDiv('speakers-div')">
+        <a id="speakers-show" onclick="showDiv('speakers-div');showSchool('wrapper-div');">
             SPEAKERS
         </a>
-        <a id="team-show" onclick="showDiv('team-div')">
+        <a id="team-show" onclick="showDiv('team-div');showSchool('wrapper-div');">
             TEAM
         </a>
-        <a id="tickets-show" onclick="showDiv('tickets-div')">
+        <a id="tickets-show" onclick="showDiv('tickets-div');showSchool('wrapper-div');">
             TICKETS
         </a>
-        <a id="sponsors-show" onclick="showDiv('sponsors-div')" >
+        <a id="sponsors-show" onclick="showDiv('sponsors-div');showSchool('wrapper-div');" >
             SPONSORS
         </a>
-        <a id="contact-us-show" onclick="showDiv('contact_us-div')" >
+        <a id="contact-us-show" onclick="showDiv('contact_us-div');showSchool('wrapper-div');" >
             CONTACT US
         </a>
-        <a id="home-page-show" onclick="showDiv('home-div')">
+        <a id="home-page-show" onclick="showDiv('home-div');hideSchool('wrapper-div');">
             HOME
         </a>
         <!--
