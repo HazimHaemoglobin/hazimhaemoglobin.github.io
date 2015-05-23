@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : krys
 */
 
+body{
+    font-weight:700; 
+    margin-bottom: 150px;
+}
 
 .taskbar{
     text-align: justify;
@@ -49,12 +53,17 @@ and open the template in the editor.
 }
 
 .footer {
-    width: 100%;
-    margin-left: auto ;
-    margin-right: auto ;
+    display:block;
+    width:100%;
+    margin: 0 auto;
+    z-index:99999999;
+    position: fixed;
+    bottom:0;
+    left:0;
 }
+/*}
 .footer div {
-    list-style-type: none; /*to remove bullets*/
+    list-style-type: none; to remove bullets
     text-align: center;
     padding: 0px;
     zoom:1;
@@ -66,7 +75,7 @@ and open the template in the editor.
     width: 150px;
     display: inline-block;
     color:white;
-}
+}*/
 
 
 
