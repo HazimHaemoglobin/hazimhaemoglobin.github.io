@@ -16,6 +16,15 @@ body{
 .taskbar{
     text-align: justify;
 }
+.taskbar-class{
+    position:relative;  
+    background-color:white; 
+    z-index: 999999; 
+    text-align:left;
+}
+.taskbar-class > h3{
+    
+}
 
 .taskbar-text{
     display: inline;
@@ -32,11 +41,14 @@ body{
     position:absolute;
     top:0;
     width:100%;
-}.navbar {
+}
+
+.navbar {
     width: 100%;
     margin-left: auto ;
     margin-right: auto ;
 }
+
 .navbar div {
     list-style-type: none; /*to remove bullets*/
     text-align: center;
@@ -45,6 +57,7 @@ body{
     overflow: hidden;
     text-transform: uppercase;
 }
+
 .navbar a{
     padding: 2px;
     width: 150px;
@@ -97,12 +110,11 @@ div.panel{
     -webkit-box-shadow: 0 0 30px 5px;
 }
 .showBio{
-    margin-top: 50px;
-    margin-left: 250px;
-    margin-right:250px;
-    margin-bottom:20px;
+    top: 50%;
+    left: 50%;
     background-color: transparent;
-    position:relative;
+    position:fixed;
+    transform:translate(-50%,-75%);
 /*    top:50%;
     left:50%;
     transform: translate(-50%, -50%);*/
