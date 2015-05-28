@@ -74,6 +74,12 @@ body{
     bottom:0;
     left:0;
 }
+
+.footer_top_holder {
+    top:0;
+    bottom: 0;
+    position:fixed;
+}
 /*}
 .footer div {
     list-style-type: none; to remove bullets
@@ -126,7 +132,6 @@ div.panel{
      width: 150px; 
      height: 125px; 
      vertical-align: top; 
-     display: inline-block;
      display: inline;
      zoom: 1; 
 }
@@ -137,7 +142,21 @@ div.panel{
     line-height: 0
 }
 
-.projects_holder{
+.projects_holder {
     text-align: center;
     font-size: xx-large;
+}
+
+.taskbar-title-style {
+    margin-top:19px; 
+    margin-bottom:21px;
+    background-color: #e2e2e2;
+}
+
+.container{
+    margin-left: 50px;
+    margin-top: 50px;
+    /* margin-bottom: 75%; */
+    
+    /* top: 0; */
 }
