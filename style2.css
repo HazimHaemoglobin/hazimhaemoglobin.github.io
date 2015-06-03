@@ -133,13 +133,13 @@ div.panel{
 
     width: 150px; 
     height: 125px; 
-    
+
 
     vertical-align: top; 
-    
+
 
     display: inline;
-    
+
 
     zoom: 1; 
 }
@@ -201,7 +201,13 @@ div.panel{
     -o-transition: -o-transform .3s ease-in-out;
 }
 
-.wpb_column > .wpb_wrapper *:last-child {
+.text-color-red > .wpb_wrapper *:last-child {
     font-weight:bold;
     color:#fa2900;
 }
+.centeredImage{
+
+    display: block;
+    margin: 0 auto;
+}
+
