@@ -133,8 +133,14 @@ div.panel{
 
     width: 150px; 
     height: 125px; 
+    
+
     vertical-align: top; 
+    
+
     display: inline;
+    
+
     zoom: 1; 
 }
 .three-stretch {
@@ -146,7 +152,7 @@ div.panel{
 
 .projects_holder {
     text-align: center;
-    font-size: xx-large;
+    font-size: xx-small;
 }
 
 .taskbar-title-style {
@@ -175,4 +181,27 @@ div.panel{
     padding: 0; 
     margin: 0; 
     text-align: center;
+}
+.job_title {
+    font-size:13px;
+}
+
+//edits the team pictures
+.image-h {
+    //edits size of displayed image (1 normal size, 1< bigger, 1> smaller)
+    transform:scale(.85);
+    -webkit-transform: scale(.85);
+    -moz-transform: scale(.85);
+    -ms-transform: scale(.85);
+    -o-transform: scale(.85);
+    transition: transform .3s ease-in-out;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    -moz-transition: -moz-transform .3s ease-in-out;
+    -ms-transition: -ms-transform .3s ease-in-out;
+    -o-transition: -o-transform .3s ease-in-out;
+}
+
+.wpb_column > .wpb_wrapper *:last-child {
+    font-weight:bold;
+    color:#fa2900;
 }
