@@ -211,3 +211,13 @@ div.panel{
     margin: 0 auto;
 }
 
+.paragraph-text{
+    margin-left: 100px; margin-right: 100px
+}
+
+.centered-text{
+    text-align: center;
+}
+.large-red-text{
+    font-size: large;
+}
