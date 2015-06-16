@@ -16,25 +16,8 @@
     </style>
 
 
-    <script type='text/javascript'>
-        var curDiv;
-
-        function showDiv(id) {
-            //hide current div
-            if (curDiv != null) {
-                document.getElementById(curDiv).style.display = "none";
-            }
-            document.getElementById(id).style.display = "inline";
-            curDiv = id;
-        }
-
-        function showSchool(school) {
-            document.getElementById(school).style.display = "none";
-        }
-        function hideSchool(school) {
-            document.getElementById(school).style.display = "inline";
-        }
-
+    <script type='text/javascript' src="showHideDiv.js">
+       
 
     </script>
     <meta charset="UTF-8"/>
@@ -1003,10 +986,12 @@
             </div>
         </div>
 
+        <div id="speakers-div" class="wpv_row section vc_row-fluid grid_section" style="display:none;">
+            
+        </div>
 
 
-
-        <div  id='speakers-div' class="wpb_row section vc_row-fluid grid_section" style="display:none;" >
+        <div   class="wpb_row section vc_row-fluid grid_section" style="display:none;" >
 
             <div class=" section_inner clearfix">
                 <div class='section_inner_margin clearfix'>
