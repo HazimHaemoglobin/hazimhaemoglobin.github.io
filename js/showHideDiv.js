@@ -9,7 +9,7 @@ var curDiv;
 
 function showDiv(id) {
     //hide current div
-    if (curDiv != null) {
+    if (curDiv !== null) {
         document.getElementById(curDiv).style.display = "none";
     }
     document.getElementById(id).style.display = "inline";
