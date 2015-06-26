@@ -5,14 +5,28 @@
  */
 
 
-
 var curDiv;
 
 function showDiv(id) {
     //hide current div
-    if (curDiv != null) {
+    if (curDiv !== null) {
         document.getElementById(curDiv).style.display = "none";
     }
     document.getElementById(id).style.display = "inline";
     curDiv = id;
 }
+function showSchool(school) {
+    document.getElementById(school).style.display = "none";
+}
+
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#page").hide();
+  });
+
+  $("#show").click(function(){
+    $("#page").show();
+  });
+
+});
+

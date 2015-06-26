@@ -9,5 +9,12 @@
         {"firstName":"Wei","lastName":"Li","position":"Finance","href":"http://i.imgur.com/m0c6iwR.jpg?1","src":"http://i.imgur.com/m0c6iwR.jpg?1"},
         {"firstName":"Oksana","lastName":"Potapchik","position":"Sponsorship","href":"http://i.imgur.com/m0c6iwR.jpg?1","src":"http://i.imgur.com/m0c6iwR.jpg?1"},
         {"firstName":"Parth","lastName":"Brahmbatt","position":"Sponsorship","href":"http://i.imgur.com/nHaUKiJ.jpg?1","src":"http://i.imgur.com/nHaUKiJ.jpg?1"}
+    ],
+    "speakers": [
+        {"firstName":"Danny", "lastName":"Blair", "href":"", "src":""},
+        {"firstNane":"Harsha","lastName":"Walia", "href":"","src":""},
+        {"firstName":"Jeremy","lastName":"Frimer","href":"","src":""},
+        {"firstName":"Leah","lastName":"Gazan","href":"","src":""},
+        {"firstNane":"Ian","lastName":"Mauro","href":"","src":""}   
     ]
 }

@@ -9,8 +9,8 @@
     </style>
 
 
-    <script type='text/javascript' src="showHideDiv.js">
-       
+    <script type='text/javascript' src="js/showHideDiv.js">
+
 
     </script>
     <meta charset="UTF-8"/>
@@ -52,11 +52,11 @@
     <link rel='stylesheet' id='style_dynamic_responsive-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/style_dynamic_responsive.php?ver=4.1.1' type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_front-css'  href='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/css/js_composer_front.css?ver=4.2.3' type='text/css' media='all' />
     <link rel='stylesheet' id='custom_css-css'  href='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/css/custom_css.php?ver=4.1.1' type='text/css' media='all' />
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <!--<link rel="stylesheet" href="style.css" type="text/css"> -->
     <!-- added by krys -->
-    <link rel='stylesheet' href='style2.css' type='text/css'>
+    <link rel='stylesheet' href='css/style.css' type='text/css'>
 
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+    <!--<script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/./jquery/jquery.js?ver=1.11.1'></script> -->
     <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
     <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/layerslider.kreaturamedia.jquery.js?ver=5.1.1'></script>
     <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/LayerSlider/static/js/greensock.js?ver=1.11.2'></script>
@@ -117,32 +117,25 @@
     <div id="taskbar" class="fixedElement navbar" style='position:fixed; z-index: 99999999; text-align:center;  ' >
 
 
-        <a id="home-page-show" onclick="showDiv('home-div');
-                hideSchool('wrapper-div');">
+        <a id="home-page-show" onclick="showDiv('home-div')">
             HOME
         </a>
-        <a id="about-show" onclick="showDiv('about-div');
-                showSchool('wrapper-div');">
+        <a id="about-show" onclick="showDiv('about-div')">
             ABOUT</a>
 
-        <a id="speakers-show" onclick="showDiv('speakers-div');
-                showSchool('wrapper-div');">
+        <a id="speakers-show" onclick="showDiv('speakers-div')">
             SPEAKERS
         </a>
-        <a id="team-show" onclick="showDiv('team-div');
-                showSchool('wrapper-div');">
+        <a id="team-show" onclick="showDiv('team-div')">
             TEAM
         </a>
-        <a id="tickets-show" onclick="showDiv('tickets-div');
-                showSchool('wrapper-div');">
+        <a id="tickets-show" onclick="showDiv('tickets-div')">
             TICKETS
         </a>
-        <a id="sponsors-show" onclick="showDiv('sponsors-div');
-                showSchool('wrapper-div');" >
+        <a id="sponsors-show" onclick="showDiv('sponsors-div')" >
             SPONSORS
         </a>
-        <a id="contact-us-show" onclick="showDiv('contact_us-div');
-                showSchool('wrapper-div');" >
+        <a id="contact-us-show" onclick="showDiv('contact_us-div')" >
             CONTACT US
         </a>
     </div>
@@ -890,7 +883,7 @@
                                         </div>
 
                                         <div class="tiar-box3">
-                                            
+
                                         </div>
 
 
@@ -943,21 +936,21 @@
         </div>
 
         <div  class="wpv_row section vc_row-fluid grid_section" style="display:none;">
-            
+
         </div>
 
         <div  class="wpb_row section vc_row-fluid grid_section" style="display: none">
-            
-                            <div class="separator small cent taskbar-title-style taskbar-title-style" >
-                            </div>
-                            <div class="custom_font_holder custom_font_holder_2" >
-                                <span style="color: #e62b1e;">
-                                    OUR
-                                </span> 
-                                SPEAKERS
-                            </div>
-                            <div class="separator small cent taskbar-title-style taskbar-title-style" >
-                            </div>
+
+            <div class="separator small cent taskbar-title-style taskbar-title-style" >
+            </div>
+            <div class="custom_font_holder custom_font_holder_2" >
+                <span style="color: #e62b1e;">
+                    OUR
+                </span> 
+                SPEAKERS
+            </div>
+            <div class="separator small cent taskbar-title-style taskbar-title-style" >
+            </div>
         </div>
         <div id="speakers-div"  class="wpb_row section vc_row-fluid grid_section" style="display:none;" >
 
@@ -1167,7 +1160,7 @@
                                                         <span class='text_inner'>
                                                             <span class='feature_holder'>
                                                                 <span class="feature_holder_icons">       
-                                                                    <span href="#harsha-walia_bio" class='preview qbutton small white'   onclick="showDiv('susan-lingle_bio')">
+                                                                    <span href="#harsha-walia_bio" class='preview qbutton small white'   onclick="showDiv('harsha-walia_bio')">
                                                                         bio
                                                                     </span>
                                                                 </span>
@@ -1347,23 +1340,7 @@
     </footer>
 
 
-    <script type='text/javascript'>
-        /* <![CDATA[ */
-        var qodeLike = {"ajaxurl": "http:\/\/tedxcambridgeuniversity.org\/wp-admin\/admin-ajax.php"};
-        /* ]]> */
-    </script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/qode-like.js?ver=1.0'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/plugins.js?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.carouFredSel-6.2.1.js?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.mousewheel.min.js?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/jquery.touchSwipe.min.js?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/lib/isotope/dist/isotope.pkgd.min.js?ver=4.2.3'></script>
-    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/default_dynamic.php?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/default.min.js?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/themes/bridge/js/custom_js.php?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-includes/js/comment-reply.min.js?ver=4.1.1'></script>
-    <script type='text/javascript' src='http://tedxcambridgeuniversity.org/wp-content/plugins/js_composer/assets/js/js_composer_front.js?ver=4.2.3'></script>
+  
 
 </body>
 </html>
