@@ -48,7 +48,6 @@
 
         <!-- links tags addd by krysjonaz -->
         <link rel="stylesheet" type="text/css" href="./bootstrap/dist/css/style.css">
-        <link rel="stylesheet" type="text/css" href="./bootstrap/dist/css/navbar-custom.css">
         <!-- script tags added by krysjonaz -->
         <script src="./bootstrap/js/showHideDiv.js"></script>
     </head>
@@ -68,7 +67,7 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         </script>
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <nav id="navbar" class="fixedElement navbar navbar-inverse navbar-fixed-top navbar-custom">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
@@ -80,13 +79,13 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li ><a href="http://www.tedxuniversityofwinnipeg.com/#home" onclick="showDiv('home-div')">HOME</a></li>
-                        <li><a href="http://www.tedxuniversityofwinnipeg.com/#about" onclick="showDiv('home-div')">ABOUT</a></li>
-                        <li><a href="http://www.tedxuniversityofwinnipeg.com/#speakers" onclick="showDiv('home-div')">SPEAKERS</a></li>
-                        <li><a href="http://www.tedxuniversityofwinnipeg.com/#team" onclick="showDiv('home-div')">TEAM</a></li>
-                        <li><a href="http://www.tedxuniversityofwinnipeg.com/#tickets" onclick="showDiv('home-div')">TICKETS</a></li>
-                        <li><a href="http://www.tedxuniversityofwinnipeg.com/#sponsors" onclick="showDiv('home-div')">SPONSORS</a></li>
-                        <li><a href="http://www.tedxuniversityofwinnipeg.com/#contact" onclick="showDiv('home-div')">CONTACT US</a></li>
+                        <li ><a id="home-page-show" href="http://www.tedxuniversityofwinnipeg.com/#home" onclick="showDiv('home-div')">HOME</a></li>
+                        <li><a id="about-show" href="http://www.tedxuniversityofwinnipeg.com/#about" onclick="showDiv('about-div')">ABOUT</a></li>
+                        <li><a id="speakers-show" href="http://www.tedxuniversityofwinnipeg.com/#speakers" onclick="showDiv('speakers-div')">SPEAKERS</a></li>
+                        <li><a  id="team-show" href="http://www.tedxuniversityofwinnipeg.com/#team" onclick="showDiv('team-div')">TEAM</a></li>
+                        <li><a id="tickets-show" href="http://www.tedxuniversityofwinnipeg.com/#tickets" onclick="showDiv('tickets-div')">TICKETS</a></li>
+                        <li><a id="sponsors-show" href="http://www.tedxuniversityofwinnipeg.com/#sponsors" onclick="showDiv('sponsors-div')">SPONSORS</a></li>
+                        <li><a id="contacts-show" href="http://www.tedxuniversityofwinnipeg.com/#contact" onclick="showDiv('contact-div')">CONTACT US</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -1278,31 +1277,7 @@
                 </div>
             </div>
         </div> 
-        <div id="taskbar" class="fixedElement navbar" style='position:fixed; z-index: 99999999; text-align:center;  ' >
-
-
-            <a id="home-page-show" onclick="showDiv('home-div')">
-                HOME
-            </a>
-            <a id="about-show" onclick="showDiv('about-div')">
-                ABOUT</a>
-
-            <a id="speakers-show" onclick="showDiv('speakers-div')">
-                SPEAKERS
-            </a>
-            <a id="team-show" onclick="showDiv('team-div')">
-                TEAM
-            </a>
-            <a id="tickets-show" onclick="showDiv('tickets-div')">
-                TICKETS
-            </a>
-            <a id="sponsors-show" onclick="showDiv('sponsors-div')" >
-                SPONSORS
-            </a>
-            <a id="contact-us-show" onclick="showDiv('contact_us-div')" >
-                CONTACT US
-            </a>
-        </div>
+        <div id="navbar" class="fixe
 
         <footer class='footer' style='z-index:99999999'>
             <div class='page-footer'>
