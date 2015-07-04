@@ -73,6 +73,7 @@ body{
     position: fixed;
     bottom:0;
     left:0;
+    background-color: black;
 }
 
 .footer_top_holder {
@@ -83,7 +84,7 @@ body{
     position:fixed;
 }
 
-.footer div {
+.footer  div {
     list-style-type: none; 
     text-align: center;
     padding: 0px;
@@ -91,7 +92,7 @@ body{
     overflow: hidden;
     text-transform: uppercase;
 }
-.footer span{
+.footer  span{
     padding: 2px;
     width: 150px;
     display: inline-block;
