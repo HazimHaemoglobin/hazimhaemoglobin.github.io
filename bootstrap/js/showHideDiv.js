@@ -19,14 +19,3 @@ function showSchool(school) {
     document.getElementById(school).style.display = "none";
 }
 
-$(document).ready(function(){
-  $("#hide").click(function(){
-    $("#page").hide();
-  });
-
-  $("#show").click(function(){
-    $("#page").show();
-  });
-
-});
-
