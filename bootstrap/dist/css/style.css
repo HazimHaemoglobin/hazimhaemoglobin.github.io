@@ -82,9 +82,9 @@ body{
     right: 0;
     position:fixed;
 }
-/*}
+
 .footer div {
-    list-style-type: none; to remove bullets
+    list-style-type: none; 
     text-align: center;
     padding: 0px;
     zoom:1;
@@ -96,7 +96,7 @@ body{
     width: 150px;
     display: inline-block;
     color:white;
-}*/
+}
 
 
 
