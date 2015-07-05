@@ -15,7 +15,8 @@ function showDiv(id) {
     document.getElementById(id).style.display = "inline";
     curDiv = id;
 }
-function showSchool(school) {
-    document.getElementById(school).style.display = "none";
-}
 
+
+function changePageTitle(title){
+    window.location.hash = title;
+}
