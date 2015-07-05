@@ -17,9 +17,9 @@ function showDiv(id) {
     return false;
 }
 
-
-function changePageTitle(title) {
-    var updatedTitle = title.split("-");
-    window.location.hash = "http://www.tedxuniversityofwinnipeg.com/" + updatedTitle[0];
-    
-}
+//
+//function changePageTitle(title) {
+//    var updatedTitle = title.split("-");
+//    window.location.hash = "http://www.tedxuniversityofwinnipeg.com/" + updatedTitle[0];
+//    
+//}
