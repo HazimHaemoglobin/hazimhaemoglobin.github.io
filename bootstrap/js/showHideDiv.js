@@ -17,6 +17,7 @@ function showDiv(id) {
 }
 
 
-function changePageTitle(title){
-    window.location.hash = title;
+function changePageTitle(title) {
+    var updatedTitle = title.split("-");
+    window.location.hash = updatedTitle[0];
 }
