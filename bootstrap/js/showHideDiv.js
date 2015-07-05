@@ -19,5 +19,5 @@ function showDiv(id) {
 
 function changePageTitle(title) {
     var updatedTitle = title.split("-");
-    window.location.hash = updatedTitle[0];
+    window.location.hash = "http://www.tedxuniversityofwinnipeg.com/" + updatedTitle[0];
 }
