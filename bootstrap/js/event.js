@@ -1,13 +1,9 @@
-window.onload=function(){
-    var ul = document.getElementById("navbar-ul");  
-    
-    
-  document.getElementById().addEventListener("click", "" )
-  document.addEventListener("click", "about-show");
-  document.addEventListener("click", "home-show");
-  document.addEventListener("click", "home-show");
-  document.addEventListener("click", "home-show");
-  document.addEventListener("click", "home-show");
-  document.addEventListener("click", "home-show");
-  
+
+
+window.onload = function () {
+    var liElems = document.getElementById("navbar-ul").childNodes;
+
+    for (var i = 0; i < liElems; i++) {
+        document.addEventListener("click", document.getElementById(liElems[i] + "-div") , false);
+    }
 };

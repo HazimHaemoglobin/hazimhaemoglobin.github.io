@@ -7,7 +7,7 @@
 
 var curDiv;
 
-function showDiv(id) {
+function showDiv(id, title) {
     //hide current div
     if (curDiv !== null) {
         document.getElementById(curDiv).style.display = "none";
@@ -15,6 +15,7 @@ function showDiv(id) {
    
     document.getElementById(id).style.display = "inline";
     curDiv = id;
+    changePageTitle(title);
 }
 
 
