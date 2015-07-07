@@ -12,14 +12,15 @@ function showDiv(id) {
     if (curDiv !== null) {
         document.getElementById(curDiv).style.display = "none";
     }
+   
     document.getElementById(id).style.display = "inline";
     curDiv = id;
-    return false;
 }
 
 
 function changePageTitle(title) {
     var updatedTitle = title.split("-");
+    console.log(updatedTitle);
     window.location.hash = "http://www.tedxuniversityofwinnipeg.com/" + updatedTitle[0];
     
 }
