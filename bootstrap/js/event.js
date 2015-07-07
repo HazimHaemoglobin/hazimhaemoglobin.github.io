@@ -1,5 +1,6 @@
 window.onload=function(){
-    var ul = document.getElementById("navbar-ul").childNodes;
+    var ul = document.getElementById("navbar-ul");  
+    
     
   document.getElementById().addEventListener("click", "" )
   document.addEventListener("click", "about-show");
