@@ -21,7 +21,6 @@ function showDiv(id, title) {
 
 function changePageTitle(title) {
     var updatedTitle = title.split("-");
-    console.log(updatedTitle);
     window.location.hash = "http://www.tedxuniversityofwinnipeg.com/" + updatedTitle[0];
     
 }
