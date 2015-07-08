@@ -37,7 +37,7 @@ function showDiv(id) {
     console.log(id);
     console.log(curDiv);
     console.log(document.getElementById(id));
-    if (curDiv !== null || curDiv !== undefined) {
+    if (curDiv !== null ) {
         document.getElementById(curDiv).style.display = "none";
     }
 
