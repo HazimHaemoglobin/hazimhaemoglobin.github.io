@@ -11,9 +11,9 @@ function navbarEvents(liElems) {
     for (var i = 0; i < liElems.length; i++) {
 
         console.log("liElems[" + i + "] is " + liElems[i]);
-        var liElem = document.getElementById(liElems[i]);
+        var liElem = liElems[i].children;
         console.log(liElem);
-        var elemToAddEventTo = liElem.children.innerHTML + "-div";
+        var elemToAddEventTo = liElem.innerHTML + "-div";
         console.log("element ToAddEventTo is " + elemToAddEventTo);
         document.addEventListener("click", elemToAddEventTo, false);
         showDiv(elemToAddEventTo);
