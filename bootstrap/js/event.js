@@ -33,7 +33,7 @@ function showDiv(id) {
 
 function changePageTitle(title) {
     var updatedTitle = title.split("-");
-    console.log('updated title is ' + updatedTitle);
+    console.log('updated title is ' + updatedTitle[0]);
     window.History.pushState({urlpath:'www.tedxuniversityofwinnipeg.com/' + updatedTitle[0]});
 
 }
