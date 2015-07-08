@@ -20,7 +20,7 @@ function navbarEvents(liElems) {
         var e = document.getElementById(elemToAddEventTo);
         console.log(e);
         document.addEventListener("click", e, false);
-        showDiv(e);
+        showDiv(elemToAddEventTo);
     }
 }
 
