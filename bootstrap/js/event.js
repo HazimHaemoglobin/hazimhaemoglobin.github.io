@@ -2,6 +2,8 @@
 
 window.onload = function () {
     var liElems = document.getElementById("navbar-ul").childNodes;
+    
+        console.log("liElems[" + i + "] is " + liElems[i]);
     navbarEvents(liElems);
 };
 
