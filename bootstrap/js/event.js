@@ -16,6 +16,7 @@ function navbarEvents(liElems) {
         var elemToAddEventTo = liElem[i].innerHTML + "-div";
         var elemToPass = liElem[i].innerHTML + "-nav";
         console.log("element ToAddEventTo is " + elemToAddEventTo);
+        console.log("element to pass " + elemToPass);
         var e = document.getElementById(elemToAddEventTo);
         var ex = document.getElementById(elemToPass);
         console.log(e);
