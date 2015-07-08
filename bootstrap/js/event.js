@@ -3,7 +3,9 @@
 window.onload = function () {
     var liElems = document.getElementById("navbar-ul").childNodes;
     
+    for (var i = 0; i < liElems; i++) {
         console.log("liElems[" + i + "] is " + liElems[i]);
+    }
     navbarEvents(liElems);
 };
 
