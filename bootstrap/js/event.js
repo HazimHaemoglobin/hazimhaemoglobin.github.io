@@ -14,10 +14,12 @@ function navbarEvents(liElems) {
         var liElem = liElems[i].children;
         console.log(liElem);
         var elemToAddEventTo = liElem[i].innerHTML + "-div";
+        var elemToPass = liElem[i].innerHTML + ".nav";
         console.log("element ToAddEventTo is " + elemToAddEventTo);
         var e = document.getElementById(elemToAddEventTo);
+        var ex = document.getElementById(elemToPass);
         console.log(e);
-        document.addEventListener("click", e, false);
+        document.addEventListener("click", ex, false);
         showDiv(elemToAddEventTo);
     }
 }
@@ -30,7 +32,7 @@ function showDiv(id) {
     console.log(id);
     console.log(curDiv);
     console.log(document.getElementById(id));
-    if (curDiv !== null) {
+    if (curDiv !== null || curDiv !== undefined) {
         document.getElementById(curDiv).style.display = "none";
     }
 
