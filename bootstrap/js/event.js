@@ -3,11 +3,10 @@
 window.onload = function () {
     var liElems = document.getElementById("navbar-ul").child;
     navbarEvents(liElems);
-    showDiv();
     changePageTitle();
 };
 
-function navbarEvents() {
+function navbarEvents(liElems) {
     console.log("liElems is" + liElems);
     for (var i = 0; i < liElems; i++) {
         var divToAddEventTo = document.getElementById(liElems[i].innerHTML) + "-div";
@@ -34,7 +33,7 @@ function showDiv(id) {
 
 function changePageTitle(title) {
     var updatedTitle = title.split("-");
-    console.log('updated title is ' + updatedTitle)
+    console.log('updated title is ' + updatedTitle);
     window.History.pushState({urlpath:'www.tedxuniversityofwinnipeg.com/' + updatedTitle[0]});
 
 }
