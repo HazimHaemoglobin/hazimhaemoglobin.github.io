@@ -11,10 +11,12 @@ function navbarEvents(liElems) {
     for (var i = 0; i < liElems.length; i++) {
 
         console.log("liElems[" + i + "] is " + liElems[i]);
-        var divToAddEventTo = document.getElementById(liElems[i]).children.innerHTML + "-div";
-        console.log("divToAddEventTo is " + divToAddEventTo);
-        document.addEventListener("click", divToAddEventTo, false);
-        showDiv(divToAddEventTo);
+        var liElem = document.getElementById(liElems[i]);
+        console.log(liElem);
+        var elemToAddEventTo = liElem.children.innerHTML + "-div";
+        console.log("element ToAddEventTo is " + elemToAddEventTo);
+        document.addEventListener("click", elemToAddEventTo, false);
+        showDiv(elemToAddEventTo);
     }
 }
 
