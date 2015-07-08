@@ -14,10 +14,10 @@ function navbarEvents(liElems) {
         var liElem = liElems[i].children;
         console.log("\n" + liElem);
         
-        var elemToAddEventTo = liElem.innerHTML + "-div";
+        var elemToAddEventTo = liElem[0].innerHTML + "-div";
         console.log("\nelement ToAddEventTo is " + elemToAddEventTo);
         
-        var elemToPass = liElem[i].innerHTML + "-nav";
+        var elemToPass = liElem[0].innerHTML + "-nav";
         console.log("\nelement to pass " + elemToPass);
         
         var e = document.getElementById(elemToAddEventTo);
