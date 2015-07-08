@@ -1,4 +1,4 @@
-
+var liElems = document.getElementById("navbar-ul").child;
 
 window.onload = function () {
     navbarEvents(liElems);
@@ -7,10 +7,10 @@ window.onload = function () {
 };
 
 function navbarEvents() {
-    var liElems = document.getElementById("navbar-ul").child;
-    console.log(liElems);
+    console.log("liElems is" + liElems);
     for (var i = 0; i < liElems; i++) {
         var divToAddEventTo = document.getElementById(liElems[i].innerHTML) + "-div";
+        console.log("divToAddEventTo is " + divToAddEventTo);
         document.addEventListener("click", divToAddEventTo, false);
         showDiv(divToAddEventTo);
     }
@@ -33,6 +33,7 @@ function showDiv(id) {
 
 function changePageTitle(title) {
     var updatedTitle = title.split("-");
-    window.location.hash = "http://www.tedxuniversityofwinnipeg.com/" + updatedTitle[0];
+    console.log('updated title is ' + updatedTitle)
+    window.History.pushState({urlpath:'www.tedxuniversityofwinnipeg.com/' + updatedTitle[0]});
 
 }
