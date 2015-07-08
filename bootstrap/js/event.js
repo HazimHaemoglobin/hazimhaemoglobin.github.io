@@ -3,7 +3,6 @@
 window.onload = function () {
     var liElems = document.getElementById("navbar-ul").child;
     navbarEvents(liElems);
-    changePageTitle();
 };
 
 function navbarEvents(liElems) {
