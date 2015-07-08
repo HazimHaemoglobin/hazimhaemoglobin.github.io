@@ -37,9 +37,9 @@ function showDiv(id) {
     console.log(id);
     console.log(curDiv);
     console.log(document.getElementById(id));
-//    if (curDiv !== null || curDiv !== undefined) {
-//        document.getElementById(curDiv).style.display = "none";
-//    }
+    if (curDiv !== null || curDiv !== undefined) {
+        document.getElementById(curDiv).style.display = "none";
+    }
 
     document.getElementById(id).style.display = "inline";
     curDiv = id;
