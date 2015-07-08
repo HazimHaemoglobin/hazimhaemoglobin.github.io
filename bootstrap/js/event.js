@@ -29,6 +29,9 @@ var curDiv;
 
 function showDiv(id) {
     //hide current div
+    console.log(id);
+    console.log(curDiv);
+    console.log(document.getElementById(id));
     if (curDiv !== null) {
         document.getElementById(curDiv).style.display = "none";
     }
