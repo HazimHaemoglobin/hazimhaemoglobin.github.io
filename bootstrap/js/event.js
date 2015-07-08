@@ -1,7 +1,7 @@
 
 
 window.onload = function () {
-    var liElems = document.getElementById("navbar-ul").child;
+    var liElems = document.getElementById("navbar-ul").childNodes;
     for (var i=0; i<liElems.length; i++){
         console.log("liElems[" + i + "] is " + liElems[i]);
     }
