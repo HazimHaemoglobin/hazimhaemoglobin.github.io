@@ -4,7 +4,7 @@ window.onload = function () {
     var liElems = document.getElementById("navbar-ul").children;
     console.log(liElems);
     
-    for (var i = 0; i < liElems; i++) {
+    for (var i = 0; i < liElems.length; i++) {
         console.log("liElems[" + i + "] is " + liElems[i]);
     }
     navbarEvents(liElems);
