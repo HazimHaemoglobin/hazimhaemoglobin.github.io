@@ -2,6 +2,7 @@
 
 window.onload = function () {
     var liElems = document.getElementById("navbar-ul").children;
+    console.log(liElems);
     
     for (var i = 0; i < liElems; i++) {
         console.log("liElems[" + i + "] is " + liElems[i]);
