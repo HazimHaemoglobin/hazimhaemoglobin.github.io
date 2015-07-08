@@ -2,6 +2,9 @@
 
 window.onload = function () {
     var liElems = document.getElementById("navbar-ul").child;
+    for (var i=0; i<liElems.length; i++){
+        console.log("liElems[" + i + "] is " + liElems[i]);
+    }
     navbarEvents(liElems);
 };
 
