@@ -13,6 +13,8 @@ function navbarEvents(liElems) {
         console.log("liElems[" + i + "] is " + liElems[i]);
         var liElem = liElems[i].children;
         console.log(liElem);
+        console.log(liElem.toString());
+        console.log(liElem.innerHTML);
         var elemToAddEventTo = liElem.innerHTML + "-div";
         console.log("element ToAddEventTo is " + elemToAddEventTo);
         document.addEventListener("click", elemToAddEventTo, false);
