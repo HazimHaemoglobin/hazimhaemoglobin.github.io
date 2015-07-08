@@ -4,14 +4,11 @@ window.onload = function () {
     var liElems = document.getElementById("navbar-ul").children;
     console.log(liElems);
     
-    for (var i = 0; i < liElems.length; i++) {
-        console.log("liElems[" + i + "] is " + liElems[i]);
-    }
     navbarEvents(liElems);
 };
 
 function navbarEvents(liElems) {
-    for (var i = 0; i < liElems; i++) {
+    for (var i = 0; i < liElems.length; i++) {
 
         console.log("liElems[" + i + "] is " + liElems[i]);
         var divToAddEventTo = document.getElementById(liElems[i].a.innerHTML) + "-div";
