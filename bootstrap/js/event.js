@@ -6,7 +6,7 @@ var curDiv;
 for(var i=0; i<navChildren.length; i++){
     var navbarChild = navbar.children[i];
     var writeHere = navbarChild.children[0].innerHTML;
-    writeHere.addEventListener("click", writeHere + "-div");
+    addEventListener("click", writeHere + "-div");
 }
 
 
