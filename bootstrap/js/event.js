@@ -15,10 +15,15 @@ window.onload = function () {
     }
 
 
+    navChildren.onclick = function (e) {
+        var link = navChildren.children.innerHTML + "-div";
+        var linkedElem = document.getElementById(link);
+        showDiv(link);
+    };
 
 
 
-  
+
 
     function navbarEvents(liElems) {
         for (var i = 0; i < liElems.length; i++) {
@@ -68,9 +73,3 @@ window.onload = function () {
     }
 
 };
-
-  navChildren.onclick = function (e) {
-        var link = navChildren.children.innerHTML + "-div";
-        var linkedElem = document.getElementById(link);
-        showDiv(link);
-    };
