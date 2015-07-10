@@ -19,6 +19,7 @@ navChildren.onclick = function () {
     var linkedElem = document.getElementById(link);
     console.log(link);
     showDiv(link);
+    changePageTitle()
 };
 
 
@@ -26,23 +27,19 @@ navChildren.onclick = function () {
 function navbarEvents(liElems) {
     for (var i = 0; i < liElems.length; i++) {
 
-        console.log("liElems[" + i + "] is " + liElems[i].innerHTML);
+       
         var liElem = liElems[i].children;
-        console.log("liElem is " + liElem);
-        console.log("liElem[" + i + "] is " + liElem[i]);
-
         var elemToAddEventTo = liElem[0].innerHTML + "-div";
         console.log("element ToAddEventTo is " + elemToAddEventTo);
 
         var elemToPass = liElem[0].innerHTML + "-nav";
         console.log("element to pass " + elemToPass);
 
-        var e = document.getElementById(elemToAddEventTo);
-        console.log("e is " + e);
-        var ex = document.getElementById(elemToPass);
-        console.log("ex is " + ex);
-        document.addEventListener("click", ex, false);
-        showDiv(elemToAddEventTo);
+        var elemAddEvent = document.getElementById(elemToAddEventTo);
+        console.log("elemEvent is " + elemAddEvent);
+        var elemPass = document.getElementById(elemToPass);
+        console.log("elemPass is " + elemPass);
+        document.addEventListener("click", elemPass, false);
     }
 }
 function showDiv(id) {
@@ -57,8 +54,8 @@ function showDiv(id) {
 
     document.getElementById(id).style.display = "inline";
     curDiv = id;
-    changePageTitle(id);
 }
+
 function changePageTitle(title) {
     console.log("in changePageTitle");
     var updatedTitle = title.split("-");
