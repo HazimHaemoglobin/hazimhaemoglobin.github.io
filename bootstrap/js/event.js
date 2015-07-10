@@ -1,10 +1,25 @@
 
+var navbar = document.getElementById("navbar-ul");
+var navChildren = navbar.children;
+var curDiv;
+
+for(var i=0; i<navChildren.length; i++){
+    var navbarChild = navbar.children[i];
+    var writeHere = navbarChild.children[0].innerHTML;
+    writeHere.addEventListener("click", writeHere + "-div");
+}
+
+
 
 window.onload = function () {
-    var liElems = document.getElementById("navbar-ul").children;
-    console.log("\n" + liElems);
-    
-    navbarEvents(liElems);
+    console.log("\n" + navChildren);
+    navbarEvents(navChildren);
+};
+
+navChildren.onclick=function(e){
+    var link = navChildren.children.innerHTML + "-div";
+    var linkedElem = document.getElementById(link);
+    showDiv(link);
 };
 
 function navbarEvents(liElems) {
@@ -30,16 +45,15 @@ function navbarEvents(liElems) {
 }
 
 
-var curDiv;
 
 function showDiv(id) {
     //hide current div
     console.log(id);
     console.log(curDiv);
     console.log(document.getElementById(id));
-//    if (curDiv !== null ) {
-//        document.getElementById(curDiv).style.display = "none";
-//    }
+    if (curDiv !== null ) {
+        document.getElementById(curDiv).style.display = "none";
+    }
 
     document.getElementById(id).style.display = "inline";
     curDiv = id;
