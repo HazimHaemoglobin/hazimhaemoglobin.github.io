@@ -4,13 +4,14 @@ var navChildren = navbar.children;
 var curDiv = null;
 
 window.onload = function () {
-    console.log("\n" + navChildren);
+    console.log("\n" + navChildren[0]);
     navbarEvents(navChildren);
 
 
     for (var i = 0; i < navChildren.length; i++) {
         var navbarChild = navbar.children[i];
         var writeHere = navbarChild.children[0].innerHTML;
+        console.log(writeHere);
         addEventListener("click", writeHere + "-div");
     }
 
