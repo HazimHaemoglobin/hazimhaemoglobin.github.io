@@ -29,7 +29,7 @@ function navbarEvents(liElems) {
         console.log("liElems[" + i + "] is " + liElems[i].innerHTML);
         var liElem = liElems[i].children;
         console.log("liElem is " + liElem);
-        console.log("liElem[" + i + "] is " + liElem[i])
+        console.log("liElem[" + i + "] is " + liElem[i]);
 
         var elemToAddEventTo = liElem[0].innerHTML + "-div";
         console.log("element ToAddEventTo is " + elemToAddEventTo);
