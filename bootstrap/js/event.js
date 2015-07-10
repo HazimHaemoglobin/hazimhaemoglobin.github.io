@@ -26,29 +26,29 @@ navChildren.onclick = function () {
 function navbarEvents(liElems) {
     for (var i = 0; i < liElems.length; i++) {
 
-        console.log("\nliElems[" + i + "] is " + liElems[i].innerHTML);
+        console.log("liElems[" + i + "] is " + liElems[i].innerHTML);
         var liElem = liElems[i].children;
-        console.log("\n" + liElem[0]);
+        console.log("liElem is " + liElem[0]);
 
         var elemToAddEventTo = liElem[0].innerHTML + "-div";
-        console.log("\nelement ToAddEventTo is " + elemToAddEventTo);
+        console.log("element ToAddEventTo is " + elemToAddEventTo);
 
         var elemToPass = liElem[0].innerHTML + "-nav";
-        console.log("\nelement to pass " + elemToPass);
+        console.log("element to pass " + elemToPass);
 
         var e = document.getElementById(elemToAddEventTo);
-        console.log("\n" + e);
+        console.log("e is " + e);
         var ex = document.getElementById(elemToPass);
-        console.log("\n" + ex);
+        console.log("ex is " + ex);
         document.addEventListener("click", ex, false);
         showDiv(elemToAddEventTo);
     }
 }
 function showDiv(id) {
     //hide current div
-    console.log(id);
-    console.log(curDiv);
-    console.log(document.getElementById(id));
+    console.log("id is " + id);
+    console.log("curDiv is " + curDiv);
+    console.log("id element is " + document.getElementById(id));
     if (curDiv !== null) {
         document.getElementById(curDiv).style.display = "none";
     }
