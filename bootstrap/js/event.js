@@ -28,7 +28,7 @@ window.onload = function () {
     function navbarEvents(liElems) {
         for (var i = 0; i < liElems.length; i++) {
 
-            console.log("\nliElems[" + i + "] is " + liElems[i]);
+            console.log("\nliElems[" + i + "] is " + liElems[i].innerHTML);
             var liElem = liElems[i].children;
             console.log("\n" + liElem);
 
