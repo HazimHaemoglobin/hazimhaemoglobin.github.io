@@ -30,7 +30,7 @@ window.onload = function () {
 
             console.log("\nliElems[" + i + "] is " + liElems[i].innerHTML);
             var liElem = liElems[i].children;
-            console.log("\n" + liElem);
+            console.log("\n" + liElem[0]);
 
             var elemToAddEventTo = liElem[0].innerHTML + "-div";
             console.log("\nelement ToAddEventTo is " + elemToAddEventTo);
