@@ -68,7 +68,7 @@ window.onload = function () {
         console.log("in changePageTitle");
         var updatedTitle = title.split("-");
         console.log('updated title is ' + updatedTitle[0]);
-        window.history.pushState({urlpath: 'www.tedxuniversityofwinnipeg.com/' + updatedTitle[0]}, updatedTitle[0], updatedTitle[0]);
+        window.history.pushState({urlpath: 'www.tedxuniversityofwinnipeg.com/#' + updatedTitle[0]}, updatedTitle[0], updatedTitle[0]);
 
     }
 
