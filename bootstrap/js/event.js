@@ -4,13 +4,6 @@ var navChildren = navbar.children;
 var curDiv = null;
 
 window.onload = function () {
-    for (var i = 0; i < navChildren.length; i++) {
-        var navbarChild = navbar.children[i];
-        var writeHere = navbarChild.children[0].innerHTML;
-        console.log(writeHere);
-        addEventListener("click", writeHere + "-div");
-    }
-    console.log("\n" + navChildren[0]);
     navbarEvents(navChildren);
 };
 
@@ -19,7 +12,7 @@ navChildren.onclick = function () {
     var linkedElem = document.getElementById(link);
     console.log(link);
     showDiv(link);
-    changePageTitle()
+    changePageTitle();
 };
 
 
