@@ -28,12 +28,13 @@ function navbarEvents(liElems) {
     for (var i = 0; i < liElems.length; i++) {  
         var liElem = liElems[i].children;
         var elemToAddEventTo = liElem[0].innerHTML + "-div";
-        console.log("element ToAddEventTo is " + elemToAddEventTo);
-
         var elemToPass = liElem[0].innerHTML + "-nav";
+        console.log("element ToAddEventTo is " + elemToAddEventTo);
         console.log("element to pass " + elemToPass);
         var elemPass = document.getElementById(elemToPass);
         console.log("elemPass is " + elemPass);
+        console.log(document.getElementById(elemToAddEventTo));
+        console.log(document.getElementById(elemToPass));
         elemToAddEventTo.addEventListener("click", elemPass, false);
     }
 }
