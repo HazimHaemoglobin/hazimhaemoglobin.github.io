@@ -29,6 +29,7 @@ function navbarEvents(liElems) {
         console.log("liElems[" + i + "] is " + liElems[i].innerHTML);
         var liElem = liElems[i].children;
         console.log("liElem is " + liElem);
+        console.log("liElem[" + i + "] is " + liElem[i])
 
         var elemToAddEventTo = liElem[0].innerHTML + "-div";
         console.log("element ToAddEventTo is " + elemToAddEventTo);
@@ -47,6 +48,7 @@ function navbarEvents(liElems) {
 function showDiv(id) {
     //hide current div
     console.log("id is " + id);
+    console.log("id's innerhtml is " + id.innerHTML);
     console.log("curDiv is " + curDiv);
     console.log("id element is " + document.getElementById(id));
     if (curDiv !== null) {
