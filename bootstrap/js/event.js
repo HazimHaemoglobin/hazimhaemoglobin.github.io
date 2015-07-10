@@ -35,7 +35,7 @@ function navbarEvents(liElems) {
         console.log("elemPass is " + elemPass);
         console.log(document.getElementById(elemToAddEventTo));
         console.log(document.getElementById(elemToPass));
-        document.getElementById(elemToAddEventTo).addEventListener("click", elemPass, false);
+        document.getElementById(elemToAddEventTo).addEventListener("click", document.getElementById(elemPass), false);
     }
 }
 function showDiv(id) {
