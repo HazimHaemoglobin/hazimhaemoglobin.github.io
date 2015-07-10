@@ -19,6 +19,7 @@ var curDiv = null;
         navChildren.onclick = function (e) {
             var link = navChildren.children.innerHTML + "-div";
             var linkedElem = document.getElementById(link);
+            console.log(link);
             showDiv(link);
         };
 
@@ -55,9 +56,9 @@ var curDiv = null;
             console.log(id);
             console.log(curDiv);
             console.log(document.getElementById(id));
-//        if (curDiv !== null) {
-//            document.getElementById(curDiv).style.display = "none";
-//        }
+        if (curDiv !== null) {
+            document.getElementById(curDiv).style.display = "none";
+       }
 
             document.getElementById(id).style.display = "inline";
             curDiv = id;
