@@ -27,7 +27,7 @@ function navbarEvents(liElems) {
     for (var i = 0; i < liElems.length; i++) {
 
         console.log("liElems[" + i + "] is " + liElems[i].innerHTML);
-        var liElem = liElems.children;
+        var liElem = liElems[i].children;
         console.log("liElem is " + liElem);
         console.log("liElem[" + i + "] is " + liElem[i]);
 
