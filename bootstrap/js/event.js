@@ -1,7 +1,7 @@
 
 var navbar = document.getElementById("navbar-ul");
 var navChildren = navbar.children;
-var curDiv;
+var curDiv =null;
 
 for(var i=0; i<navChildren.length; i++){
     var navbarChild = navbar.children[i];
