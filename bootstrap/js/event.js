@@ -3,7 +3,6 @@ var navbar = document.getElementById("navbar-ul");
 var navChildren = navbar.children;
 var curDiv = null;
 
-while (true) {
     window.onload = function () {
         console.log("\n" + navChildren[0]);
         navbarEvents(navChildren);
@@ -76,5 +75,5 @@ while (true) {
 
     };
 
-}
+
 
