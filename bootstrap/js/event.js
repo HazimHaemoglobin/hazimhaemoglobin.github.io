@@ -18,7 +18,7 @@ navChildren.onclick = function () {
 
 
 function navbarEvents(liElems) {
-    for (var i = 0; i < liElems.length; i++) {  
+    for (var i = 0; i < liElems.length; i++) {
         var liElem = liElems[i].children;
         var elemToAddEventTo = liElem[0].innerHTML + "-div";
         var elemToPass = liElem[0].innerHTML + "-nav";
@@ -27,10 +27,14 @@ function navbarEvents(liElems) {
         var elemPass = document.getElementById(elemToPass);
         console.log(document.getElementById(elemToAddEventTo));
         console.log(document.getElementById(elemToPass));
-        document.getElementById(elemToAddEventTo).addEventListener("click", function(){
-            showDiv(elemPass);
-        }, false);
     }
+}
+
+function eventListenersAreAdded(elemToAddEventTo, elemToPass) {
+    document.getElementById(elemToAddEventTo).addEventListener("click", function () {
+        console.log("ADDING EVENT LISTENER");
+        showDiv(elemToPass);
+    }, false);
 }
 function showDiv(id) {
     //hide current div
