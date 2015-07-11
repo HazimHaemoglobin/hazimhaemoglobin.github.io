@@ -32,11 +32,14 @@ function navbarEvents(liElems) {
 }
 
 function eventListenersAreAdded(elemToAddEventTo, elemToPass) {
-
+    console.log("ENTERING EVENTLISTERSAREADDED");
+    console.log(elemToAddEventTo);
+    console.log(elemToPass);
     console.log("ADDING EVENT LISTENER");
     document.getElementById(elemToAddEventTo).addEventListener("click", function () {
         showDiv(elemToPass);
     }, false);
+    console.log("LEAVING EVENTLISTENERSAREADDED");
 }
 function showDiv(id) {
     //hide current div
