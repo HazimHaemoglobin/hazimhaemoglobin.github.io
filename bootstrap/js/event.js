@@ -27,13 +27,14 @@ function navbarEvents(liElems) {
         var elemPass = document.getElementById(elemToPass);
         console.log(document.getElementById(elemToAddEventTo));
         console.log(document.getElementById(elemToPass));
-        eventListenersAreAdded(elemToAddEventTo);
+        eventListenersAreAdded(elemToAddEventTo, elemToPass);
     }
 }
 
-function eventListenersAreAdded(elemToAddEventTo) {
+function eventListenersAreAdded(elemToAddEventTo, elemToPass) {
+
+    console.log("ADDING EVENT LISTENER");
     document.getElementById(elemToAddEventTo).addEventListener("click", function () {
-        console.log("ADDING EVENT LISTENER");
         showDiv(elemToPass);
     }, false);
 }
