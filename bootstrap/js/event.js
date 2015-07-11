@@ -33,8 +33,8 @@ function navbarEvents(liElems) {
 
 function eventListenersAreAdded(elemToAddEventTo, elemToPass) {
     console.log("ENTERING EVENTLISTERSAREADDED");
-    console.log(elemToAddEventTo);
-    console.log(elemToPass);
+    console.log("elem to add event to is " + elemToAddEventTo);
+    console.log("elem to pass is " + elemToPass);
     console.log("ADDING EVENT LISTENER");
     document.getElementById(elemToAddEventTo).addEventListener("click", function () {
         showDiv(elemToPass);
