@@ -5,6 +5,7 @@ var curDiv = null;
 
 window.onload = function () {
     navbarEvents(navChildren);
+    changePageTitle(navChildren.split("-"));
 };
 
 navChildren.onclick = function () {
@@ -57,8 +58,7 @@ function showDiv(id) {
 
 function changePageTitle(title) {
     console.log("in changePageTitle");
-    var updatedTitle = title.split("-");
-    console.log('updated title is ' + updatedTitle[0]);
-    window.history.pushState({urlpath: 'www.tedxuniversityofwinnipeg.com/#' + updatedTitle[0]}, updatedTitle[0], updatedTitle[0]);
+    console.log('updated title is ' + title[0]);
+    window.history.pushState({urlpath: 'www.tedxuniversityofwinnipeg.com/#' + title[0]}, title[0], title[0]);
 
 }
