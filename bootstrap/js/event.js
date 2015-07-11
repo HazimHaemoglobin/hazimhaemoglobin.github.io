@@ -12,7 +12,7 @@ navChildren.onclick = function () {
     var linkedElem = document.getElementById(link);
     console.log(link);
     showDiv(link);
-    changePageTitle();
+    changePageTitle(navChildren);
 };
 
 
@@ -27,7 +27,9 @@ function navbarEvents(liElems) {
         var elemPass = document.getElementById(elemToPass);
         console.log(document.getElementById(elemToAddEventTo));
         console.log(document.getElementById(elemToPass));
-        document.getElementById(elemToAddEventTo).addEventListener("click", document.getElementById(elemPass), false);
+        document.getElementById(elemToAddEventTo).addEventListener("click", function(){
+            showDiv(elemPass);
+        }, false);
     }
 }
 function showDiv(id) {
