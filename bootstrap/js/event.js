@@ -27,10 +27,11 @@ function navbarEvents(liElems) {
         var elemPass = document.getElementById(elemToPass);
         console.log(document.getElementById(elemToAddEventTo));
         console.log(document.getElementById(elemToPass));
+        eventListenersAreAdded(elemToAddEventTo);
     }
 }
 
-function eventListenersAreAdded(elemToAddEventTo, elemToPass) {
+function eventListenersAreAdded(elemToAddEventTo) {
     document.getElementById(elemToAddEventTo).addEventListener("click", function () {
         console.log("ADDING EVENT LISTENER");
         showDiv(elemToPass);
