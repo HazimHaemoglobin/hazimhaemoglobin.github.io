@@ -18,6 +18,7 @@
             allIds.push(el.id);
         }
     }
+    console.log(allIds);
 
     oldHash = window.location.hash;
     console.log(oldHash);
