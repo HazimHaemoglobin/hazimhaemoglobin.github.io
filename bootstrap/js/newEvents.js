@@ -8,7 +8,7 @@
 
 (function (w, d) {
     console.log("START FUNCTION");
-    var allElements = document.getElementsByTagName("*");
+    var allElements = d.getElementsByTagName("*");
     console.log(allElements);
     var allIds = [];
     console.log(allIds);
@@ -20,18 +20,18 @@
     }
     console.log(allIds);
 
-    oldHash = window.location.hash;
+    oldHash = w.location.hash;
     console.log(oldHash);
 
-    window.onhashchange = function () {
+    w.onhashchange = function () {
         console.log("INSIDE ONHASHCHANGE METHOD");
-        if (oldHash === window.location.hash)
+        if (oldHash === w.location.hash)
             return;
 
         allIds.forEach(function (id) {
             id = "#" + id;
             console.log(id);
-            if (id === window.location.hash) {
+            if (id === w.location.hash) {
                 $(".content div:not(.hidden)").fadeOut(400, function () {
                     $(".content div:not(.hidden)").addClass("hidden");
                     $(id).fadeIn(400, function () {
@@ -42,6 +42,6 @@
             }
         });
 
-        oldHash = window.location.hash;
+        oldHash = w.location.hash;
     };
 }(this, this.document));
