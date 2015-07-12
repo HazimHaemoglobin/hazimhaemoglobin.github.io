@@ -1,4 +1,3 @@
-
 var navbar = document.getElementById("navbar-ul");
 var navChildren = navbar.children;
 var curDiv = null;
