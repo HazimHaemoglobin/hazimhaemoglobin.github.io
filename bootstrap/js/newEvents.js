@@ -10,10 +10,11 @@
 
         var id = w.location.hash;
 
-        $('#id').fadeIn(400);
+        $(id).fadeIn(400);
+        console.log("id is ", id);
 
         if(prevId){
-            $('#prevId').fadeOut(400);
+            $(prevId).fadeOut(400);
         }
 
         prevId = id;
