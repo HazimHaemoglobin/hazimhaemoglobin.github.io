@@ -12,6 +12,10 @@ body{
     font-weight:700; 
     margin-bottom: 150px;
 }
+.header{
+    position:fixed;
+    display: block;
+}
 
 .taskbar{
     text-align: justify;
