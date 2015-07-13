@@ -10,10 +10,10 @@
 
         var id = w.location.hash;
 
-        $(id).fadeIn(400);
+        $('#id').fadeIn(400);
 
         if(prevId){
-            $(prevId).fadeOut(400);
+            $('#prevId').fadeOut(400);
         }
 
         prevId = id;
@@ -21,6 +21,6 @@
 
     w.addEventListener("hashchange", handler, false);
 
-    $('.hidden').hide();
+    $('.nav-content-hidden').hide();
 
 }(this, this.document));
