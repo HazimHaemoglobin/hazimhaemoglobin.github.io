@@ -26,7 +26,7 @@
     w.onhashchange = function () {
         console.log("INSIDE ONHASHCHANGE METHOD");
         if (oldHash === w.location.hash)
-            return;
+            
 
         allIds.forEach(function (id) {
             id = "#" + id;
