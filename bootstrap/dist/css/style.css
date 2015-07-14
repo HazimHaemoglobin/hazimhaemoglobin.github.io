@@ -173,7 +173,7 @@ div.panel{
 
 .container{
     margin-left: 50px;
-   /*  margin-top: 50px; */
+    /*  margin-top: 50px; */
     /* margin-bottom: 75%; */
 
     /* top: 0; */
@@ -235,18 +235,18 @@ div.panel{
 //added by xxwhatever
 
 .content .hidden {
-  display: none;
+    display: none;
 }
 
 .nav {
-  width: 100%;
+    width: 100%;
 }
 
 .nav .cats li                                                                                                                                                                                       
 {
-  display: inline;
-  list-style-type: none;
-  padding-right: 20px;
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
 }
 
 .section-fill{
@@ -282,9 +282,38 @@ div.panel{
 }*/
 
 html{
-      background: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover
-      
+    background: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover
+
+}
+
+img.tedx-logo{
+    position: absolute;
+    max-width: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+
+}
+
+img.tedx-logo:empty
+{
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (orientation: portrait) {
+  img.tedx-logo { max-width: 90%; }
+}
+
+@media screen and (orientation: landscape) {
+  img.tedx-logo { max-height: 90%; }
 }
