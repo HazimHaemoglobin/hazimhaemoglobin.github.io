@@ -254,7 +254,7 @@ div.panel{
 }
 
 .movie-downloader{
-    max-width: 80px;
+    max-width: 200px;
     display:inline-block;
     width: 30%;
 }
