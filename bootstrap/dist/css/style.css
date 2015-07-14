@@ -310,10 +310,10 @@ img.tedx-logo:empty
 	transform: translate(-50%, -50%);
 }
 
-/*@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   img.tedx-logo { max-width: 90%; }
-}*/
-
+}
+/*
 @media screen and (orientation: landscape) {
   img.tedx-logo { max-height: 90%; }
-}
+}*/
