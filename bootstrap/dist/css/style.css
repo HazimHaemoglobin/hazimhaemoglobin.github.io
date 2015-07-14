@@ -259,21 +259,21 @@ div.panel{
     width: 30%;
 }
 
-separator-margin{
+.separator-margin{
     margin-top: 18px;margin-bottom: 2px;
 }
 
-separator-margin-bottom{margin-top: 3px;margin-bottom: 9px; }
+.separator-margin-bottom{margin-top: 3px;margin-bottom: 9px; }
 
-UW-image-big{background-image:url(http://i.imgur.com/AI1EBVy.jpg);}
+.UW-image-big{background-image:url(http://i.imgur.com/AI1EBVy.jpg);}
 
-UW-photo-placement{width:90%;left:5%;top:20%;}
-team-separator{margin-top: 10px;margin-bottom: 33px;}
+.UW-photo-placement{width:90%;left:5%;top:20%;}
+.team-separator{margin-top: 10px;margin-bottom: 33px;}
 
-faq-font-holder{font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;}
-z-index-high{z-index:99999999;}
+.faq-font-holder{font-family: Open Sans; font-size: 30px; line-height: 36px; font-style: normal; font-weight: 700; color: #303030; text-decoration: none; letter-spacing: 0px; padding: 0; margin: 0; text-align: center;}
+.z-index-high{z-index:99999999;}
 
-home-background-image{
+.home-background-image{
       background-image: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
