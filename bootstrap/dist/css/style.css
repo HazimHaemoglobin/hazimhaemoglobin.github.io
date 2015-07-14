@@ -274,7 +274,7 @@ faq-font-holder{font-family: Open Sans; font-size: 30px; line-height: 36px; font
 z-index-high{z-index:99999999;}
 
 home-background-image{
-      background: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
+      background-image: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
