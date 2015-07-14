@@ -248,3 +248,13 @@ div.panel{
   list-style-type: none;
   padding-right: 20px;
 }
+
+.section-fill{
+    max-with:300px;
+}
+
+.movie-downloader{
+    max-width: 80px;
+    display:inline-block;
+    width: 30%;
+}
