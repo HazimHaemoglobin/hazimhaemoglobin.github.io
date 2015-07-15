@@ -29,5 +29,6 @@
     if (event.newUrl.contains("home")) {
         $('.tedx-logo').fadeIn();
     }
+    console.log(event.newURL);
 
 }(this, this.document));
