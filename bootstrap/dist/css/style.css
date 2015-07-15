@@ -340,7 +340,7 @@ img.tedx-logo:empty
     padding: 0;
     background-color: transparent;
 }
-#container {
+.container {
     width: inherit;
     height: inherit;
     margin: 0;
