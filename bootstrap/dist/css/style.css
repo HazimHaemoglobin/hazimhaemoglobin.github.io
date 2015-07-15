@@ -178,7 +178,7 @@ div.panel{
 
 .container{
     /* margin-left: 50px; */
-    /*  margin-top: 50px; */
+      margin-top: 50px; 
     /* margin-bottom: 75%; */
 
     /* top: 0; */
@@ -343,13 +343,13 @@ html, body {
     padding: 0;
 /*    background-color: transparent;*/
 }
-.container {
+/*.container {
     width: inherit;
-/*    height: inherit;*/
+    height: inherit;
     margin: 0;
-/*    padding: 0;*/
-/*    background-color: transparent;*/
-}/*
+    padding: 0;
+    background-color: transparent;
+}
 h1 {
     margin: 0;
     padding: 0;
