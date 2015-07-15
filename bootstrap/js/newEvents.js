@@ -22,10 +22,8 @@
         prevId = id;
     };
 
-    w.addEventListener("hashchange", function () {
-        $('.body-background-image').fadeTo(1, 0.5,
-                handler);
-    }, false);
+    w.addEventListener("hashchange", handler
+            , false);
 
     $('.nav-content-hidden').hide();
     if (event.newUrl.contains("home")) {
