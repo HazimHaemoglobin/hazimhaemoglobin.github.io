@@ -24,7 +24,7 @@
 
     w.addEventListener("hashchange", function () {
         $('.body-background-image').fadeTo(1, 0.5,
-                handler());
+                handler);
     }, false);
 
     $('.nav-content-hidden').hide();
