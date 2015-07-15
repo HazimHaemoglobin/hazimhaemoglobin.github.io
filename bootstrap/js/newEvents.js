@@ -24,5 +24,8 @@
     w.addEventListener("hashchange", handler, false);
 
     $('.nav-content-hidden').hide();
+    if(event.newUrl.contains("home")){
+        $('.tedx-logo').show();
+    }
 
 }(this, this.document));
