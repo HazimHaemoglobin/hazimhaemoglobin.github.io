@@ -27,7 +27,7 @@ nav{
 }
 .taskbar-class{
     position:relative;  
-    background-color:white; 
+    background-color:transparent; 
     z-index: 999999; 
     text-align:left;
     margin-bottom: 50px;
@@ -390,4 +390,12 @@ h1 {
     -ms-transform: translate(50%, 50%);
     -o-transform: translate(50%, 50%);
     position:absolute;
+}
+
+.home-elements{
+  
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;  
 }
