@@ -290,7 +290,7 @@ html{
 }
 
 img.tedx-logo{
-    position: absolute;
+    position: fixed;;
     max-width: 80%;
     top: 10%;
     left: 10%;
@@ -301,7 +301,7 @@ img.tedx-logo{
 
 img.tedx-logo:empty
 {
-    top: 50%;
+    top: 30%;
     left: 40%;
     -webkit-transform: translate(-50%, -40%);
     -moz-transform: translate(-50%, -40%);
