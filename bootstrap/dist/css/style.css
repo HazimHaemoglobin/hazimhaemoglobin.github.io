@@ -348,7 +348,7 @@ html, body {
     height: inherit;
     margin: 0;
     padding: 0;
-    background-color: pink;
+    background-color: transparent;
 }/*
 h1 {
     margin: 0;
