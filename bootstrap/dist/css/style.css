@@ -30,6 +30,7 @@ nav{
     background-color:white; 
     z-index: 999999; 
     text-align:left;
+    margin-bottom: 50px;
 }
 .taskbar-class > h3{
 
