@@ -319,7 +319,7 @@ img.tedx-logo:empty
 }*/
 
 
-/*.clearfix{
+.centered-image{
     right:50%;
     transform:translate(50%,50%);
 
@@ -328,4 +328,4 @@ img.tedx-logo:empty
     -ms-transform: translate(50%, 50%);
     -o-transform: translate(50%, 50%);
     position:absolute;
-}*/
+}
