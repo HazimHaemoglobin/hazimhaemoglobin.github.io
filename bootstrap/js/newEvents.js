@@ -4,6 +4,7 @@
 
     var prevId;
     var handler = function(event){
+        $('.tedx-logo').hide();
         console.log('event', event);
 
         if(event.oldURL === event.newURL) return;
