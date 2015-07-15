@@ -341,14 +341,14 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: transparent;
+/*    background-color: transparent;*/
 }
 .container {
     width: inherit;
     height: inherit;
     margin: 0;
     padding: 0;
-    background-color: transparent;
+/*    background-color: transparent;*/
 }/*
 h1 {
     margin: 0;
