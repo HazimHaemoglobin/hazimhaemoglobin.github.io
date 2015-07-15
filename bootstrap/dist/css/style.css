@@ -359,12 +359,12 @@ h1 {
 
 .bio-divs{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 25%;
+    left: 25%;
     margin-top: -50px;
     margin-left: -50px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: white;
 }
 
