@@ -301,17 +301,17 @@ img.tedx-logo{
 
 img.tedx-logo:empty
 {
-	top: 50%;
-	left: 40%;
-	-webkit-transform: translate(-50%, -40%);
-	-moz-transform: translate(-50%, -40%);
-	-ms-transform: translate(-50%, -40%);
-	-o-transform: translate(-50%, -40%);
-	transform: translate(-50%, -40%);
+    top: 50%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -40%);
+    -moz-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    -o-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
 }
 
 @media screen and (orientation: portrait) {
-  img.tedx-logo { max-width: 90%; }
+    img.tedx-logo { max-width: 90%; }
 }
 /*
 @media screen and (orientation: landscape) {
@@ -322,5 +322,10 @@ img.tedx-logo:empty
 .clearfix{
     right:50%;
     transform:translate(50%,50%);
+
+    -webkit-transform: translate(50%, 50%);
+    -moz-transform: translate(50%, 50%);
+    -ms-transform: translate(50%, 50%);
+    -o-transform: translate(50%, 50%);
     position:absolute;
 }
