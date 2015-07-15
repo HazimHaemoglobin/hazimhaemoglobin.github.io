@@ -399,3 +399,7 @@ h1 {
     left:0;
     right:0;  
 }
+
+bg-col-trans{
+    background-color: transparent;
+}
