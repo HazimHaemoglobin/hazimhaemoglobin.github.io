@@ -87,6 +87,10 @@ nav{
     margin-bottom: 0px;
 }
 
+body{
+    margin-bottom: 50px;
+}
+
 .footer_top_holder {
     top:0;
     bottom: 0;
