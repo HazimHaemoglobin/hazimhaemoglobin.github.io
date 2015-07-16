@@ -393,13 +393,9 @@ h1 {
 
 .bio-divs{
     position: absolute;
-    top: 25%;
-    left: 25%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 200px;
-    height: 200px;
-    background-color: white;
+    top:10%;
+    background-color: transparent;
+    margin:150px;
 }
 
 .nav-page-holder{
