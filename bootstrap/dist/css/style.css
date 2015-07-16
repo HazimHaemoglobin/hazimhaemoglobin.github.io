@@ -431,3 +431,7 @@ bg-col-trans{
     overflow:auto;
     
 }
+
+.portfolio_description .projects_holder article{
+    background-color: transparent;
+}
