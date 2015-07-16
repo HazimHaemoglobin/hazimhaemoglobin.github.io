@@ -25,7 +25,7 @@
     };
 
     var fadeTo = function () {
-        $('.tedx-logo').fadeTo(1, 0.5, handler);
+        
     };
 
 
