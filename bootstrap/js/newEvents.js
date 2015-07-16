@@ -24,11 +24,11 @@
     var fadeTo = function () {
         $('.tedx-logo').fadeTo(1, 0.5, handler);
     };
-    if (event.newURL.contains("home")) {
+   
+      
+  
         w.addEventListener("hashchange", handler, false);
-    } else {
-        w.addEventListener("hashchange", fadeTo, false);
-    }
+    
 
     $('.nav-content-hidden').hide();
     if (event.newUrl.contains("home")) {
