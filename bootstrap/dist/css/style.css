@@ -427,11 +427,13 @@ h1 {
 bg-col-trans{
     background-color: transparent;
 }
-.scroll{
-    overflow:auto;
-    
+.scroll {
+    margin-top:40px;
+    height: 80px;
+    overflow-y: scroll;
 }
 
 .portfolio_description .projects_holder article{
-    background-color: transparent;
+    background-color: transparent!important;
 }
+

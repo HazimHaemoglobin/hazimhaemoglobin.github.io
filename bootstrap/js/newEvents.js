@@ -19,21 +19,22 @@
             $(prevId).fadeOut(400);
         }
         prevId = id;
+        if (event.newUrl.contains("home")) {
+            $('.tedx-logo').fadeIn();
+        }
     };
 
     var fadeTo = function () {
         $('.tedx-logo').fadeTo(1, 0.5, handler);
     };
-   
-      
-  
-        w.addEventListener("hashchange", handler, false);
-    
+
+
+
+    w.addEventListener("hashchange", handler, false);
+
 
     $('.nav-content-hidden').hide();
-    if (event.newUrl.contains("home")) {
-        $('.tedx-logo').fadeIn();
-    }
+
     console.log(event.newURL);
 
 }(this, this.document));
