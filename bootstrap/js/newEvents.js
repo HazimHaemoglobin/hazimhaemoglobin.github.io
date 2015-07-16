@@ -3,17 +3,19 @@
 (function (w, d) {
 
     var prevId;
+    var homeURL = "http://hazimhaemoglobin.github.io/#home";
     var handler = function (event) {
         $('.tedx-logo').hide();
         console.log('event', event);
 
         if (event.oldURL === event.newURL)
             return;
-        if(event.oldURL)
+        if (event.oldURL)
+            var id = w.location.hash;
 
-        var id = w.location.hash;
-
-        $(id).fadeIn(400);
+        if (event.newURL !== homeURL) {
+            $(id).fadeIn(400);
+        }
         console.log("id is ", id);
 
         if (prevId) {
@@ -23,7 +25,7 @@
     };
 
     var fadeTo = function () {
-        
+
     };
 
 
