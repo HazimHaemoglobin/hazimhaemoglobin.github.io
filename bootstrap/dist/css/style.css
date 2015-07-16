@@ -433,7 +433,7 @@ bg-col-trans{
     overflow-y: scroll;
 }*/
 
-.portfolio_description .projects_holder article{
+.portfolio_description {
     background-color: transparent!important;
 }
 
