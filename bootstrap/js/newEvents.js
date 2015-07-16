@@ -13,10 +13,10 @@
             var id = w.location.hash;
 
         if (event.newURL !== homeURL) {
-            
-        $('.tedx-logo').hide();
+
+            $('.tedx-logo').hide();
             $(id).fadeIn(400);
-        } else{
+        } else {
             fadeTo(event, id);
         }
         console.log("id is ", id);
@@ -27,7 +27,7 @@
         prevId = id;
     };
 
-    var fadeTo = function (event,id) {
+    var fadeTo = function (event, id) {
         $(id).fadeTo(1, 0.5);
     };
 
@@ -38,6 +38,6 @@
 
     $('.nav-content-hidden').hide();
 
-    console.log(event.newURL);
+   
 
 }(this, this.document));
