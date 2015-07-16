@@ -18,11 +18,14 @@
         if (prevId) {
             $(prevId).fadeOut(400);
         }
-
         prevId = id;
     };
+    
+    var fadeTo=function(event){
+        $('.tedx-logo').fadeTo(2, 0.5, handler);
+    };
 
-    w.addEventListener("hashchange", handler
+    w.addEventListener("hashchange", fadeIn(event)
             , false);
 
     $('.nav-content-hidden').hide();
