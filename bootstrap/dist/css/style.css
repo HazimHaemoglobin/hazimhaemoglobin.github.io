@@ -403,3 +403,7 @@ h1 {
 bg-col-trans{
     background-color: transparent;
 }
+.scroll{
+    overflow-y:auto;
+    
+}
