@@ -9,6 +9,7 @@
 
         if (event.oldURL === event.newURL)
             return;
+        if(event.oldURL)
 
         var id = w.location.hash;
 
@@ -19,9 +20,6 @@
             $(prevId).fadeOut(400);
         }
         prevId = id;
-        if (event.newUrl.contains("home")) {
-            $('.tedx-logo').fadeIn();
-        }
     };
 
     var fadeTo = function () {

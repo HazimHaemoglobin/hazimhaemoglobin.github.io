@@ -240,7 +240,6 @@ div.panel{
     margin-right: 100px;
         margin-top:100px;
         margin-bottom: 100px;
-    
 }
 
 .centered-text{
@@ -441,3 +440,9 @@ bg-col-trans{
     background-color: transparent!important;
 }
 
+.section_inner_two{
+    width:500px;
+    margin:0 auto;
+    position:relative;
+    
+}
