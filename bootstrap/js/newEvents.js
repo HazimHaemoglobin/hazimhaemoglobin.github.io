@@ -20,12 +20,15 @@
         }
         prevId = id;
     };
-    
-    var fadeTo=function(event){
+
+    var fadeTo = function () {
         $('.tedx-logo').fadeTo(2, 0.5, handler);
     };
-
-    w.addEventListener("hashchange", fadeTo, false);
+    if (event.newURL.contains("home")) {
+        w.addEventListener("hashchange", handler, false);
+    } else {
+        w.addEventListener("hashchange", fadeTo, false);
+    }
 
     $('.nav-content-hidden').hide();
     if (event.newUrl.contains("home")) {
