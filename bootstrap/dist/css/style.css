@@ -436,4 +436,6 @@ bg-col-trans{
 .portfolio_description .projects_holder article{
     background-color: transparent!important;
 }
-
+.faq-css{
+    background-color:#f7f7f7; text-align:left;
+}
