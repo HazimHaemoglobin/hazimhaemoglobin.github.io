@@ -25,8 +25,7 @@
         $('.tedx-logo').fadeTo(2, 0.5, handler);
     };
 
-    w.addEventListener("hashchange", fadeIn(event)
-            , false);
+    w.addEventListener("hashchange", fadeTo, false);
 
     $('.nav-content-hidden').hide();
     if (event.newUrl.contains("home")) {
