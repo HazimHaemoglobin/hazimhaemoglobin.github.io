@@ -12,12 +12,13 @@
         if (event.oldURL)
             var id = w.location.hash;
 
-        if (event.newURL !== homeURL) {
-            console.log('ayy');
-            $('.tedx-logo').hide();
-            $(id).fadeIn(400);
-        } else {
+        if (event.newURL === homeURL) {
+            
             fadeTo(event, id);
+        } else {
+            console.log('ayy');
+            $('.tedx-logo').show();
+            $(id).fadeIn(400);
         }
         console.log("id is ", id);
 
