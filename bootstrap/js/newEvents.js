@@ -23,11 +23,11 @@
 
         if (id === home) {
             console.log("lmao");
-            $('body').css({ opacity:1 });
+            $('.body-background-image').css({opacity:1.0});
             $('.tedx-logo').fadeIn(400);
         } else {
             console.log('ayy');
-            $('body').css({opacity:0.1});
+            $('.body-background-image').css({opacity:0.1});
             $('.tedx-logo').fadeOut();
             $(id).fadeIn(400);
         }
