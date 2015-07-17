@@ -21,7 +21,6 @@
 
         if (id === homeHash) {
             homeHash.fadeTo(400, .1);
-            tedxlogo.show(400);
         } else {
             console.log('ayy');
             tedxlogo.hide();
