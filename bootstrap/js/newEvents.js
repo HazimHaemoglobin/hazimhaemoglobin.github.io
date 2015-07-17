@@ -27,7 +27,7 @@
             $('.tedx-logo').fadeIn(400);
         } else {
             console.log('ayy');
-//            $('.body-background-image').css({opacity:0.1});
+            $('.body-background-image').css({opacity:0.1});
             $('.tedx-logo').fadeOut();
             $(id).fadeIn(400);
         }
