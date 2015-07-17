@@ -23,6 +23,7 @@
 
 
         if (id === home) {
+            console.log("lmao");
             $(home).fadeTo(400, .1);
         } else {
             console.log('ayy');
