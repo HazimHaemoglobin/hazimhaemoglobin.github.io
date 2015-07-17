@@ -8,7 +8,7 @@
     console.log("home", home);
     var homeURL = "http://hazimhaemoglobin.github.io/" + home;
     console.log("homeurl", homeURL);
-
+$(home).hide();
 
 
     var handler = function (event) {
