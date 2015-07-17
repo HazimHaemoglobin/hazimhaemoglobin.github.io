@@ -26,7 +26,7 @@
             $('.tedx-logo').hide();
             $(id).fadeIn(400);
             $('.body-background-image').fadeOut(400);
-
+            $('.body-background-image').fadeTo(400, .1);
         }
         console.log("id is ", id);
 
