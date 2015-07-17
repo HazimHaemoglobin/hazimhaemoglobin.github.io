@@ -48,16 +48,16 @@ nav{
 }
 
 .fixedElement {
-/*    position: fixed;
-    width: 100%;
-    height: 25px;
-    left:auto;
-    padding: 5px 10px; /* some styling, please note overall height of the object will be 35px due to 5px padding on top/bottom.  */
+    /*    position: fixed;
+        width: 100%;
+        height: 25px;
+        left:auto;
+        padding: 5px 10px; /* some styling, please note overall height of the object will be 35px due to 5px padding on top/bottom.  */
     border-bottom: 1px solid #333; /* some styling */
     background-color: #fa2900;
-/*    position:absolute;
-    top:0;
-    width:100%;*/
+    /*    position:absolute;
+        top:0;
+        width:100%;*/
 }
 
 /*.navbar {
@@ -186,7 +186,7 @@ div.panel{
 
 .container{
     /* margin-left: 50px; */
-/*    margin-top: 50px; */
+    /*    margin-top: 50px; */
     /* margin-bottom: 75%; */
 
     /* top: 0; */
@@ -238,8 +238,8 @@ div.panel{
 .paragraph-text{
     margin-left: 100px; 
     margin-right: 100px;
-        margin-top:100px;
-        margin-bottom: 100px;
+    margin-top:100px;
+    margin-bottom: 100px;
 }
 
 .centered-text{
@@ -271,7 +271,7 @@ div.panel{
 }
 
 .movie-downloader{
-/*    max-width: 200px;*/
+    /*    max-width: 200px;*/
     display:inline-block;
     width: 30%;
 }
@@ -312,11 +312,11 @@ div.panel{
 .z-index-high{z-index:99999999;}
 
 .body-background-image{
-      background: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
@@ -391,11 +391,11 @@ h1 {
 }
 
 .nav-page-holder{
-/*    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    position: fixed;*/
+    /*    top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        position: fixed;*/
 
     right:50%;
     transform:translate(50%,50%);
@@ -408,7 +408,7 @@ h1 {
 }
 
 .home-elements{
-  
+
     top:0;
     bottom:0;
     left:0;
@@ -430,5 +430,10 @@ bg-col-trans{
     width:500px;
     margin:0 auto;
     position:relative;
-    
+
+}
+
+.fullscreen{
+    width:100%;
+    height:100%;
 }
