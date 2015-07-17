@@ -13,11 +13,10 @@
             var id = w.location.hash;
 
         if (event.newURL === homeURL) {
-            
             fadeTo(event, id);
         } else {
             console.log('ayy');
-            $('.tedx-logo').show();
+            $('.tedx-logo').hide();
             $(id).fadeIn(400);
         }
         console.log("id is ", id);
@@ -30,6 +29,7 @@
 
     var fadeTo = function (event, id) {
         console.log("swag");
+        $('tedx-logo').show();
         $(id).fadeTo(1, 0.5);
     };
 
