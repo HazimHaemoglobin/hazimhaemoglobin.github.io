@@ -13,7 +13,7 @@
             var id = w.location.hash;
 
         if (event.newURL !== homeURL) {
-
+            console.log('ayy');
             $('.tedx-logo').hide();
             $(id).fadeIn(400);
         } else {
