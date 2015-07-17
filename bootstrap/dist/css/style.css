@@ -433,7 +433,14 @@ bg-col-trans{
 
 }
 
-.fullscreen{
+.fullscreen-fullopacity{
     width:100%;
     height:100%;
+    opacity:1.0;
+}
+
+fullscreen-lessopacity{
+    width: 100%;
+    height:100%;
+    opacity: 0.1;
 }
