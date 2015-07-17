@@ -3,10 +3,12 @@
 (function (w, d) {
 
     var prevId;
-    var homeHash = "#home";
+    var homeHash = $("#home");
     var homeURL = "http://hazimhaemoglobin.github.io/" + homeHash;
     var id;
     var tedxlogo = ".tedx-logo";
+    
+            var d = $('#home');
     var handler = function (event) {
 
         console.log('event', event);
@@ -18,10 +20,7 @@
         id = w.location.hash;
 
         if (id === homeHash) {
-            console.log("swag");
-            $(tedxlogo).show();
-            $(id).fadeIn(400);
-            $(homeHash).fadeIn(400);
+            homeHash.fadeTo(400, .1);
         } else {
             console.log('ayy');
             $(tedxlogo).hide();
