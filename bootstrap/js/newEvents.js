@@ -3,10 +3,14 @@
 (function (w, d) {
 
     var prevId;
+    console.log("previd", prevId);
     var home = "#home";
+    console.log("home", home);
     var homeURL = "http://hazimhaemoglobin.github.io/" + home;
+    console.log("homeurl", homeURL);
     var id = w.location.hash;
-    idHash=$(id);
+    console.log("id", id);
+
     
 
     var handler = function (event) {
