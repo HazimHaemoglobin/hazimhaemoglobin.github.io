@@ -428,11 +428,9 @@ h1 {
 bg-col-trans{
     background-color: transparent;
 }
-/*.scroll {
-    margin-top:40px;
-    height: 80px;
+.scroll {
     overflow-y: scroll;
-}*/
+}
 
 .portfolio_description {
     background-color: transparent!important;
