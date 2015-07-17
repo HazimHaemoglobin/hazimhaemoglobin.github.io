@@ -317,6 +317,7 @@ div.panel{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color:transparent;
 }
 
 
@@ -436,4 +437,10 @@ bg-col-trans{
 .fullscreen{
     width:100%;
     height:100%;
+}
+opacity-low{
+    opacity:0.1;
+}
+opacity-max{
+    opacity:1.0;
 }
