@@ -16,7 +16,7 @@
             fadeTo(event, id);
         } else {
             console.log('ayy');
-            $('.tedx-logo').hide();
+//            $('.tedx-logo').hide();
             $(id).fadeIn(400);
             $('.body-background-image').fadeTo(1, .1);
         }
@@ -30,7 +30,7 @@
 
     var fadeTo = function (event, id) {
         console.log("swag");
-        $('.tedx-logo').show();
+//        $('.tedx-logo').show();
         $('.body-background-image').fadeIn(400); 
     };
 
