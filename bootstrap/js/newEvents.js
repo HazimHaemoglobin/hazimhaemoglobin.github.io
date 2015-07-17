@@ -16,17 +16,17 @@
 
         id = w.location.hash;
 
-        if (id===homeHash) {
+        if (id === homeHash) {
             console.log("swag");
             $('.tedx-logo').show();
             $(id).fadeIn(400);
-        $('.body-background-image').fadeIn(400); 
+            $('.body-background-image').fadeIn(400);
         } else {
             console.log('ayy');
             $('.tedx-logo').hide();
             $(id).fadeIn(400);
             $('.body-background-image').fadeOut(400);
-          $('#home').fadeTo(400, .1);
+
         }
         console.log("id is ", id);
 
