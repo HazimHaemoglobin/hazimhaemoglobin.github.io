@@ -24,6 +24,10 @@ $(home).hide();
 
         if (id === home) {
             console.log("lmao");
+            $('body').removeClass('.body-background-image');
+            $('body').addClass(function(){
+               $('.body-background-image').fadeTo(400, .1);
+            });
             $('.body-background-image').fadeOut(400);
             $('.body-background-image').fadeTo(400, .1);
             $('.tedx-logo').fadeIn(400);
