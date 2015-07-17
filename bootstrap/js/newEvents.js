@@ -24,8 +24,8 @@ $(home).hide();
 
         if (id === home) {
             console.log("lmao");
-            $(home).fadeOut(400);
-            $(home).fadeTo(400, .1);
+            $('.body-background-image').fadeOut(400);
+            $('.body-background-image').fadeTo(400, .1);
             $('.tedx-logo').fadeIn(400);
         } else {
             console.log('ayy');
