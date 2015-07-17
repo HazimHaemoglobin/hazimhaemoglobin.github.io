@@ -3,18 +3,22 @@
 (function (w, d) {
 
     var prevId;
-    var homeURL = "http://hazimhaemoglobin.github.io/#home";
+    var homeHash = "#home";
+    var homeURL = "http://hazimhaemoglobin.github.io/" + homeHash;
+    var id;
     var handler = function (event) {
+
         console.log('event', event);
 
         if (event.oldURL === event.newURL)
             return;
 //        if (event.oldURL)
-            var id = w.location.hash;
 
-        if (event.newURL === homeURL) {
-        console.log("swag");
-        $('.tedx-logo').show();
+        id = w.location.hash;
+
+        if (id===homeHash) {
+            console.log("swag");
+            $('.tedx-logo').show();
             $(id).fadeIn(400);
 //        $('.body-background-image').fadeIn(400); 
         } else {
@@ -31,8 +35,6 @@
         prevId = id;
     };
 
-    var fadeTo = function (event, id) {
-    };
 
 
 
@@ -41,6 +43,6 @@
 
     $('.nav-content-hidden').hide();
 
-   
+
 
 }(this, this.document));
