@@ -20,12 +20,12 @@
             console.log("swag");
             $('.tedx-logo').show();
             $(id).fadeIn(400);
-//        $('.body-background-image').fadeIn(400); 
+        $('#home').fadeIn(400); 
         } else {
             console.log('ayy');
             $('.tedx-logo').hide();
             $(id).fadeIn(400);
-//            $('.body-background-image').fadeTo(1, .1);
+          $('#home').fadeTo(1, .1);
         }
         console.log("id is ", id);
 
