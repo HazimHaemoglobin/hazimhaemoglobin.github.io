@@ -285,9 +285,6 @@ div.panel{
     margin-top: 3px;
     margin-bottom: 9px; }
 
-.UW-image-big{
-    background-image:url(http://i.imgur.com/AI1EBVy.jpg);
-}
 
 .UW-photo-placement{
     width:90%;
@@ -322,13 +319,13 @@ div.panel{
   background-size: cover;
 }
 
-html{
+/*html{
     background: url(http://i.imgur.com/AI1EBVy.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover
 
-}
+}*/
 
 img.tedx-logo{
     position: fixed;;
