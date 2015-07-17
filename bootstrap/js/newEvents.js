@@ -25,12 +25,11 @@
         if (id === home) {
             console.log("lmao");
             $(home).fadeTo(400, .1);
-            $('.tedx-logo').show();
+            $('.tedx-logo').fadeIn(400);
         } else {
             console.log('ayy');
             $('.tedx-logo').hide();
             $(id).fadeIn(400);
-            $(home).fadeTo(400, .1);
         }
         console.log("id is ", id);
 
