@@ -25,6 +25,7 @@
         if (id === home) {
             console.log("lmao");
             $(home).fadeTo(400, .1);
+            $('.tedx-logo').show();
         } else {
             console.log('ayy');
             $('.tedx-logo').hide();
