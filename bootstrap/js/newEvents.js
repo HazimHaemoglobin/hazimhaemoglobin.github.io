@@ -6,6 +6,7 @@
     var homeHash = "#home";
     var homeURL = "http://hazimhaemoglobin.github.io/" + homeHash;
     var id;
+    var tedxlogo = ".tedx-logo";
     var handler = function (event) {
 
         console.log('event', event);
@@ -18,15 +19,14 @@
 
         if (id === homeHash) {
             console.log("swag");
-            $('.tedx-logo').show();
+            $(tedxlogo).show();
             $(id).fadeIn(400);
-            $('#home').fadeIn(400);
+            $(homeHash).fadeIn(400);
         } else {
             console.log('ayy');
-            $('.tedx-logo').hide();
+            $(tedxlogo).hide();
             $(id).fadeIn(400);
-            $('#home').fadeOut(400);
-            $('#home').fadeTo(400, .1);
+            $(homeHash).fadeTo(400, .1);
         }
         console.log("id is ", id);
 
