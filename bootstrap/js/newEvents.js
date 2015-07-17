@@ -9,7 +9,7 @@
 
         if (event.oldURL === event.newURL)
             return;
-        if (event.oldURL)
+//        if (event.oldURL)
             var id = w.location.hash;
 
         if (event.newURL === homeURL) {
