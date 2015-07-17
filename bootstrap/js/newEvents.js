@@ -20,12 +20,12 @@
 
 
         if (id === homeHash) {
-            homeHash.fadeTo(400, .1);
+            //homeHash.fadeTo(400, .1);
         } else {
             console.log('ayy');
             tedxlogo.hide();
             id.fadeIn(400);
-           homeHash.fadeTo(400, .1);
+            homeHash.fadeTo(400, .1);
         }
         console.log("id is ", id);
 
