@@ -8,7 +8,8 @@
     var homeHash= $(home);
     var id;
     var tedxlogo = $(".tedx-logo");
-    var id = $(w.location.hash);
+    var id = w.location.hash;
+    idHash=$(id);
 
     var handler = function (event) {
 
@@ -19,12 +20,12 @@
 //        if (event.oldURL)
 
 
-        if (id === homeHash) {
+        if (id === home) {
             homeHash.fadeTo(400, .1);
         } else {
             console.log('ayy');
             tedxlogo.hide();
-            id.fadeIn(400);
+            idHash.fadeIn(400);
             homeHash.fadeTo(400, .1);
         }
         console.log("id is ", id);
