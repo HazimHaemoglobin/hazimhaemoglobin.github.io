@@ -8,13 +8,13 @@
     console.log("home", home);
     var homeURL = "http://hazimhaemoglobin.github.io/" + home;
     console.log("homeurl", homeURL);
-    var id = w.location.hash;
-    console.log("id", id);
 
-    
+
 
     var handler = function (event) {
 
+        var id = w.location.hash;
+        console.log("id", id);
         console.log('event', event);
 
         if (event.oldURL === event.newURL)
