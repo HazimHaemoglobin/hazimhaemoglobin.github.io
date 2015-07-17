@@ -28,6 +28,7 @@
     };
 
     var fadeTo = function (event, id) {
+        console.log("swag");
         $(id).fadeTo(1, 0.5);
     };
 
