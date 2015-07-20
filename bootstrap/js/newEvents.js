@@ -20,6 +20,7 @@
 
         if (id === home) {
             console.log('hi');
+            $('.container').fadeOut(400);
             $('.body-background-image').fadeIn(400);
             $('.tedx-logo').fadeIn(400);
             $('.body-background-image').css({opacity: 1.0});
@@ -27,6 +28,7 @@
         } else {
             //$('.body-background-image').css({opacity: 0.2});
             $('.body-background-image').fadeOut(400);
+            $('.container').fadeIn(400);
             $('.tedx-logo').fadeOut(400);
             $(id).fadeIn(400);
         }
