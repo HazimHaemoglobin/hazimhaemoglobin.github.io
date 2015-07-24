@@ -74,6 +74,7 @@ nav{
     zoom:1;
     overflow: hidden;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .navbar a{
