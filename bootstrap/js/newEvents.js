@@ -23,7 +23,7 @@
             $('.container').fadeOut(400);
             $('.body-background-image').fadeIn(400);
            // $('.body-background-image').css({opacity: 1.0});
-            $('.tedx-logo').fadeIn(400);
+            //$('.tedx-logo').fadeIn(400);
         } else {
             //$('.body-background-image').css({opacity: 0.2});
             $('.body-background-image').fadeOut(400);
